@@ -1,0 +1,251 @@
+follow_up_type,touchpoint_id,user_id,firm_id,contact_id,notes
+Phone Call,196,41,14,16,None
+Email,103,16,10,18,None
+Other,450,16,15,3,None
+Thank You Note,129,79,6,30,None
+Phone Call,261,57,13,17,None
+Email,464,19,14,17,None
+Email,136,71,5,38,None
+Other,10,13,3,13,None
+Other,451,65,5,5,None
+Phone Call,25,65,5,19,None
+Email,225,44,7,4,None
+Email,60,58,12,31,None
+Other,335,71,1,33,None
+Other,187,68,18,31,None
+Phone Call,218,15,16,27,None
+Other,301,21,1,4,None
+Other,280,88,7,3,None
+Email,324,42,4,23,None
+Thank You Note,220,55,16,35,None
+Email,396,62,9,10,None
+Phone Call,490,93,2,7,None
+Thank You Note,30,42,12,13,None
+Phone Call,413,54,17,15,None
+Email,189,22,8,24,None
+Other,235,67,17,7,None
+Thank You Note,209,7,2,40,None
+Phone Call,282,52,8,6,None
+Phone Call,112,76,15,20,None
+Other,457,10,5,24,None
+Email,206,95,1,13,None
+Thank You Note,300,26,14,5,None
+Phone Call,359,4,1,17,None
+Phone Call,215,28,15,6,None
+Email,161,96,6,34,None
+Email,243,78,9,1,None
+Other,153,58,2,26,None
+Email,452,89,13,10,None
+Thank You Note,232,70,18,23,None
+Phone Call,290,40,18,32,None
+Phone Call,330,7,15,3,None
+Email,155,67,18,14,None
+Thank You Note,235,23,2,16,None
+Phone Call,258,90,7,12,None
+Thank You Note,208,1,16,4,None
+Email,155,26,14,1,None
+Thank You Note,38,55,16,13,None
+Other,327,78,11,37,None
+Email,37,12,5,14,None
+Email,412,88,6,3,None
+Thank You Note,358,36,17,12,None
+Thank You Note,24,12,3,12,None
+Email,223,98,17,12,None
+Email,242,60,10,40,None
+Phone Call,381,22,4,29,None
+Email,137,19,15,34,None
+Phone Call,366,65,5,20,None
+Other,376,16,5,39,None
+Email,198,95,18,10,None
+Other,333,3,7,19,None
+Thank You Note,325,48,12,12,None
+Phone Call,465,13,3,15,None
+Other,110,77,8,39,None
+Thank You Note,462,91,2,17,None
+Email,419,28,15,36,None
+Other,154,10,18,29,None
+Phone Call,351,68,15,10,None
+Thank You Note,475,29,12,14,None
+Thank You Note,411,8,8,26,None
+Phone Call,233,48,8,4,None
+Thank You Note,343,77,18,8,None
+Phone Call,311,16,1,31,None
+Email,381,35,10,10,None
+Phone Call,130,16,5,37,None
+Phone Call,48,35,6,30,None
+Thank You Note,227,4,11,2,None
+Other,84,93,9,13,None
+Other,233,37,7,27,None
+Email,109,48,18,15,None
+Phone Call,460,28,16,9,None
+Thank You Note,374,15,13,35,None
+Thank You Note,173,43,14,39,None
+Other,239,65,14,14,None
+Thank You Note,29,58,7,4,None
+Thank You Note,271,13,12,28,None
+Phone Call,280,58,2,35,None
+Phone Call,207,80,17,23,None
+Thank You Note,298,88,13,6,None
+Thank You Note,104,97,15,40,None
+Other,311,42,16,20,None
+Other,209,47,3,24,None
+Thank You Note,490,32,17,14,None
+Email,456,22,4,14,None
+Other,346,87,4,38,None
+Thank You Note,491,26,13,29,None
+Other,170,15,3,4,None
+Other,183,38,10,28,None
+Phone Call,127,39,16,24,None
+Thank You Note,413,21,12,23,None
+Other,118,65,14,5,None
+Email,294,80,5,20,None
+Thank You Note,97,49,2,7,None
+Other,419,30,13,2,None
+Thank You Note,482,47,8,33,None
+Other,485,80,4,23,None
+Thank You Note,252,77,2,39,None
+Phone Call,297,41,1,28,None
+Email,326,29,13,40,None
+Phone Call,395,13,13,29,None
+Other,180,44,11,12,None
+Other,185,82,9,8,None
+Email,84,73,10,21,None
+Thank You Note,304,13,9,7,None
+Other,492,5,4,5,None
+Email,373,50,5,31,None
+Email,277,28,12,23,None
+Other,196,97,4,19,None
+Thank You Note,260,73,1,30,None
+Other,45,90,16,25,None
+Thank You Note,425,70,17,13,None
+Thank You Note,372,80,9,29,None
+Thank You Note,338,7,5,37,None
+Thank You Note,486,79,12,38,None
+Phone Call,301,36,1,11,None
+Thank You Note,25,3,3,8,None
+Thank You Note,338,3,16,23,None
+Email,143,24,4,22,None
+Email,366,82,13,38,None
+Other,395,18,7,27,None
+Other,357,17,7,29,None
+Other,85,65,16,40,None
+Email,475,86,16,5,None
+Thank You Note,446,23,3,34,None
+Other,43,66,14,23,None
+Thank You Note,23,45,10,16,None
+Email,122,50,14,12,None
+Thank You Note,210,41,2,13,None
+Other,261,89,2,27,None
+Email,351,69,5,36,None
+Other,343,29,17,36,None
+Phone Call,79,4,15,5,None
+Email,265,95,4,22,None
+Thank You Note,173,52,16,23,None
+Email,490,48,18,15,None
+Email,391,33,10,9,None
+Phone Call,211,9,18,39,None
+Email,87,46,16,32,None
+Other,198,52,4,36,None
+Thank You Note,315,30,14,22,None
+Email,391,52,14,6,None
+Phone Call,83,29,6,11,None
+Email,499,66,15,8,None
+Other,318,35,15,31,None
+Phone Call,415,94,2,39,None
+Thank You Note,442,43,12,23,None
+Thank You Note,447,26,10,13,None
+Other,131,6,11,19,None
+Thank You Note,169,70,3,13,None
+Email,160,12,16,35,None
+Thank You Note,332,17,6,17,None
+Other,373,4,1,21,None
+Other,213,50,11,4,None
+Email,384,87,16,35,None
+Other,220,15,5,15,None
+Other,252,58,11,6,None
+Phone Call,490,82,5,6,None
+Thank You Note,456,65,8,5,None
+Phone Call,209,68,15,24,None
+Thank You Note,365,42,12,19,None
+Email,85,29,5,25,None
+Email,228,87,9,32,None
+Email,245,32,15,7,None
+Other,25,44,17,1,None
+Email,140,69,4,17,None
+Thank You Note,234,70,18,5,None
+Phone Call,344,75,7,25,None
+Thank You Note,3,75,7,30,None
+Email,387,91,6,13,None
+Other,473,90,16,25,None
+Thank You Note,479,36,13,38,None
+Thank You Note,448,60,5,22,None
+Thank You Note,211,21,18,12,None
+Other,479,100,5,2,None
+Phone Call,66,20,18,14,None
+Thank You Note,267,36,12,35,None
+Email,49,74,14,10,None
+Phone Call,202,9,4,5,None
+Thank You Note,220,79,10,38,None
+Thank You Note,54,41,13,1,None
+Phone Call,332,6,1,35,None
+Other,20,85,12,27,None
+Email,28,19,3,37,None
+Thank You Note,476,52,15,40,None
+Email,485,51,3,39,None
+Other,162,71,15,39,None
+Phone Call,447,22,17,32,None
+Phone Call,73,50,7,26,None
+Phone Call,289,76,3,16,None
+Email,29,62,3,20,None
+Thank You Note,259,47,7,2,None
+Phone Call,275,16,16,35,None
+Email,65,45,15,10,None
+Email,137,48,12,8,None
+Thank You Note,393,85,17,21,None
+Phone Call,96,11,3,17,None
+Email,364,12,18,38,None
+Other,233,94,3,1,None
+Email,192,93,6,35,None
+Phone Call,277,47,13,1,None
+Phone Call,331,28,17,16,None
+Thank You Note,293,4,17,12,None
+Email,28,100,16,1,None
+Other,45,34,2,23,None
+Other,138,74,15,23,None
+Email,155,87,4,30,None
+Email,42,40,7,23,None
+Email,129,70,5,25,None
+Phone Call,395,86,8,39,None
+Phone Call,315,34,10,14,None
+Thank You Note,135,54,18,3,None
+Phone Call,24,93,1,29,None
+Email,355,92,1,29,None
+Thank You Note,386,63,11,25,None
+Email,429,9,5,40,None
+Other,298,47,11,7,None
+Email,472,80,10,7,None
+Phone Call,311,88,6,40,None
+Email,132,78,8,29,None
+Thank You Note,36,77,10,25,None
+Email,43,40,4,7,None
+Email,248,81,3,20,None
+Other,326,24,15,16,None
+Thank You Note,37,64,13,7,None
+Phone Call,272,34,17,34,None
+Other,57,21,10,26,None
+Thank You Note,34,17,15,21,None
+Phone Call,247,27,1,15,None
+Thank You Note,375,67,15,10,None
+Phone Call,161,31,9,21,None
+Email,320,29,9,22,None
+Other,242,45,16,37,None
+Thank You Note,39,53,7,37,None
+Thank You Note,113,16,18,13,None
+Email,247,87,15,11,None
+Thank You Note,404,12,12,7,None
+Phone Call,360,68,15,24,None
+Other,176,12,16,38,None
+Phone Call,285,31,4,38,None
+Thank You Note,145,95,12,33,None
+Phone Call,83,59,2,25,None
+Thank You Note,71,63,2,37,None

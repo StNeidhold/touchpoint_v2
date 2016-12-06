@@ -11,5 +11,10 @@ class Group < ApplicationRecord
              :source => :user
 
   # Validations
+  validates :name, :presence => true
+  validates :school, :presence => true
+  validates :industry, :presence => true
+  validates :open_or_closed, :presence => true
+  validates :hidden_or_public, :presence => true
 
 end

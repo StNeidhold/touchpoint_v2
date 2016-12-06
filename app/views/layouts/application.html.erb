@@ -13,6 +13,16 @@
     body {
       padding-top: 60px;
     }
+
+    .navbar-brand {
+      padding: 0px;
+      }
+    .navbar-brand>img {
+      height: 100%;
+      padding: 3px;
+      width: auto;
+      }
+
   </style>
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -35,24 +45,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="/" class="navbar-brand">TouchpointV2</a>
+        <a href="/" class="navbar-brand" href="/dashboard">
+          <img class="img-fluid" alt="Responsive image" src="assets/touchpoint_logo2.png">
+        </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/milestones">Milestones</a></li>
-          <li><a href="/verifies">Verifies</a></li>
+          <!-- <li><a href="/milestones">Milestones</a></li>
+          <li><a href="/verifies">Verifies</a></li> -->
+          <li><a href="/dashboard">Dashboard</a></li>
           <li><a href="/target_firms">Target Firms</a></li>
           <li><a href="/touchpoints">Touchpoints</a></li>
           <li><a href="/recruiting_events">Recruiting Events</a></li>
           <li><a href="/firms">Firms</a></li>
           <li><a href="/contacts">Contacts</a></li>
-          <li><a href="/follow_ups">Follow Ups</a></li>
+          <!-- <li><a href="/follow_ups">Follow Ups</a></li> -->
           <li><a href="/users">Users</a></li>
-          <li><a href="/group_members">Group Members</a></li>
+          <!-- <li><a href="/group_members">Group Members</a></li> -->
           <li><a href="/groups">Groups</a></li>
-          <li><a href="/rails/info">Sitemap</a></li>
+          <!-- <li><a href="/rails/info">Sitemap</a></li> -->
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

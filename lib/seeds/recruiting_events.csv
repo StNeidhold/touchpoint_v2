@@ -1,0 +1,105 @@
+name,location,address,date,start_time,end_time,closed,firm_id,privacy
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",8/16/2016,19:00,21:00,No,1,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",8/5/2016,19:00,21:00,No,2,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/1/2016,19:00,21:00,No,3,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/21/2016,19:00,21:00,No,4,NO
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",9/25/2016,19:00,21:00,No,5,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",9/1/2016,19:00,21:00,No,6,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/14/2016,19:00,21:00,No,7,NO
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",8/18/2016,19:00,21:00,No,8,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/23/2016,19:00,21:00,No,9,NO
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/25/2016,19:00,21:00,No,10,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/18/2016,19:00,21:00,No,11,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/16/2016,19:00,21:00,No,12,NO
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/17/2016,19:00,21:00,No,13,NO
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/6/2016,19:00,21:00,No,14,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",8/18/2016,19:00,21:00,No,15,NO
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",8/28/2016,19:00,21:00,No,16,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",8/19/2016,19:00,21:00,No,17,YES
+Corporate Conversation,Harper Center,"Hyde Park, Chicago, IL",10/2/2016,19:00,21:00,No,18,YES
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",10/2/2016,12:00,13:00,No,1,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",10/19/2016,12:00,13:00,No,2,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",9/6/2016,12:00,13:00,No,3,YES
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",10/11/2016,12:00,13:00,No,4,YES
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",8/24/2016,12:00,13:00,No,5,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",10/5/2016,12:00,13:00,No,6,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",10/4/2016,12:00,13:00,No,7,YES
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",8/13/2016,12:00,13:00,No,8,YES
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",9/9/2016,12:00,13:00,No,9,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",8/14/2016,12:00,13:00,No,10,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",10/18/2016,12:00,13:00,No,11,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",10/19/2016,12:00,13:00,No,12,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",10/16/2016,12:00,13:00,No,13,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",9/18/2016,12:00,13:00,No,14,YES
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",8/26/2016,12:00,13:00,No,15,NO
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",10/23/2016,12:00,13:00,No,16,YES
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",8/21/2016,12:00,13:00,No,17,YES
+Meet and Greet,Harper Center,"Hyde Park, Chicago, IL",8/18/2016,12:00,13:00,No,18,YES
+Bank Week Event,New York Office,"New York City, NY",12/14/2016,19:00,21:00,Yes,1,NO
+Bank Week Event,New York Office,"New York City, NY",12/16/2016,19:00,21:00,Yes,2,YES
+Bank Week Event,New York Office,"New York City, NY",12/20/2016,19:00,21:00,Yes,3,YES
+Bank Week Event,New York Office,"New York City, NY",12/15/2016,19:00,21:00,Yes,4,NO
+Bank Week Event,New York Office,"New York City, NY",12/21/2016,19:00,21:00,Yes,5,NO
+Bank Week Event,New York Office,"New York City, NY",12/15/2016,19:00,21:00,Yes,6,NO
+Bank Week Event,New York Office,"New York City, NY",12/21/2016,19:00,21:00,Yes,7,YES
+Bank Week Event,New York Office,"New York City, NY",12/20/2016,19:00,21:00,Yes,8,NO
+Bank Week Event,New York Office,"New York City, NY",12/20/2016,19:00,21:00,Yes,9,NO
+Bank Week Event,New York Office,"New York City, NY",12/21/2016,19:00,21:00,Yes,10,YES
+Bank Week Event,New York Office,"New York City, NY",12/21/2016,19:00,21:00,Yes,11,NO
+Bank Week Event,New York Office,"New York City, NY",12/14/2016,19:00,21:00,Yes,12,YES
+Bank Week Event,New York Office,"New York City, NY",12/20/2016,19:00,21:00,Yes,13,YES
+Bank Week Event,New York Office,"New York City, NY",12/15/2016,19:00,21:00,Yes,14,YES
+Bank Week Event,New York Office,"New York City, NY",12/21/2016,19:00,21:00,Yes,15,NO
+Bank Week Event,New York Office,"New York City, NY",12/21/2016,19:00,21:00,Yes,16,YES
+Bank Week Event,New York Office,"New York City, NY",12/14/2016,19:00,21:00,Yes,17,YES
+Bank Week Event,New York Office,"New York City, NY",12/19/2016,19:00,21:00,Yes,18,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/27/2016,20:00,22:00,Yes,15,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/21/2016,20:00,22:00,Yes,10,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/6/2016,20:00,22:00,Yes,2,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/12/2016,20:00,22:00,Yes,12,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/12/2016,20:00,22:00,Yes,4,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/4/2016,20:00,22:00,Yes,13,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/9/2016,20:00,22:00,Yes,16,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/23/2016,20:00,22:00,Yes,12,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/6/2016,20:00,22:00,Yes,4,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/7/2016,20:00,22:00,Yes,18,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/19/2016,20:00,22:00,Yes,16,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/24/2016,20:00,22:00,Yes,14,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/23/2016,20:00,22:00,Yes,18,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/16/2016,20:00,22:00,Yes,15,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/7/2016,20:00,22:00,Yes,18,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/11/2016,20:00,22:00,Yes,16,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/1/2016,20:00,22:00,Yes,4,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/25/2016,20:00,22:00,Yes,1,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/9/2016,20:00,22:00,Yes,1,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/7/2016,20:00,22:00,Yes,6,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/8/2016,20:00,22:00,Yes,4,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/12/2016,20:00,22:00,Yes,15,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/17/2016,20:00,22:00,Yes,17,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/25/2016,20:00,22:00,Yes,4,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/24/2016,20:00,22:00,Yes,9,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/13/2016,20:00,22:00,Yes,4,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/9/2016,20:00,22:00,Yes,13,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/19/2016,20:00,22:00,Yes,16,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/9/2016,20:00,22:00,Yes,8,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/25/2016,20:00,22:00,Yes,1,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/11/2016,20:00,22:00,Yes,5,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/28/2016,20:00,22:00,Yes,1,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/5/2016,20:00,22:00,Yes,16,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/19/2016,20:00,22:00,Yes,14,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/25/2016,20:00,22:00,Yes,4,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/1/2016,20:00,22:00,Yes,4,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/17/2016,20:00,22:00,Yes,10,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/12/2016,20:00,22:00,Yes,9,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/19/2016,20:00,22:00,Yes,10,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/4/2016,20:00,22:00,Yes,1,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/27/2016,20:00,22:00,Yes,12,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/6/2016,20:00,22:00,Yes,15,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/15/2016,20:00,22:00,Yes,2,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",8/27/2016,20:00,22:00,Yes,2,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/7/2016,20:00,22:00,Yes,2,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/23/2016,20:00,22:00,Yes,6,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/22/2016,20:00,22:00,Yes,7,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/6/2016,20:00,22:00,Yes,7,YES
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",9/3/2016,20:00,22:00,Yes,15,NO
+Off Campus Recruiting Event,Venue Name,"Chicago, IL",10/18/2016,20:00,22:00,Yes,11,NO

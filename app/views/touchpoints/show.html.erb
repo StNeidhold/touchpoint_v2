@@ -1,30 +1,28 @@
 <div class="page-header">
-  <h3>Touchpoint #<%= @touchpoint.id %></h3>
+  <h3><%= @touchpoint.description %> with <%= @touchpoint.contact.full_name %> from <%= @touchpoint.firm.name %></h3>
 </div>
 
 <div class="row">
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
-      <dt>Date</dt>
-      <dd><%= @touchpoint.date %></dd>
 
-      <dt>Time</dt>
-      <dd><%= @touchpoint.time %></dd>
+      <!-- <dt>Time</dt>
+      <dd><%= @touchpoint.time %></dd> -->
 
-      <dt>User</dt>
+      <!-- <dt>User</dt>
       <dd>
         <% if @touchpoint.user.present? %>
           <a href="/users/<%= @touchpoint.user_id %>">
             <%= @touchpoint.user.email %>
           </a>
         <% end %>
-      </dd>
+      </dd> -->
 
-      <dt>Contact</dt>
+      <dt>Contact Name</dt>
       <dd>
         <% if @touchpoint.contact.present? %>
           <a href="/contacts/<%= @touchpoint.contact_id %>">
-            <%= @touchpoint.contact.first_name %>
+            <%= @touchpoint.contact.full_name %>
           </a>
         <% end %>
       </dd>
@@ -40,6 +38,9 @@
 
       <dt>Description</dt>
       <dd><%= @touchpoint.description %></dd>
+
+      <dt>Date</dt>
+      <dd><%= @touchpoint.date %></dd>
 
       <dt>Location</dt>
       <dd><%= @touchpoint.location %></dd>

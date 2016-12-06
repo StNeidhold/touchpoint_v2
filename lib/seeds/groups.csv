@@ -1,0 +1,13 @@
+name,school,industry,open_or_closed,hidden_or_public,password
+Class of 2017,Booth,Investment Banking,YES,NO,booth
+Class of 2018,Booth,Investment Banking,YES,NO,booth
+Class of 2017,Wharton,Investment Banking,YES,NO,wharton
+Class of 2018,Wharton,Investment Banking,YES,NO,wharton
+Class of 2017,Columbia,Investment Banking,YES,NO,columbia
+Class of 2018,Columbia,Investment Banking,YES,NO,
+Class of 2017,Kellogg,Investment Banking,YES,NO,kellogg
+Class of 2018,Kellogg,Investment Banking,YES,NO,
+Class of 2017,MIT,Investment Banking,YES,NO,
+Class of 2018,MIT,Investment Banking,YES,NO,
+Class of 2017,HBS,Investment Banking,YES,NO,harvard
+Class of 2018,HBS,Investment Banking,YES,NO,harvard

@@ -28,7 +28,11 @@
         <td><%= recruiting_event.date %></td>
         <td><%= recruiting_event.start_time %></td>
         <td><%= recruiting_event.end_time %></td>
-        <td><%= recruiting_event.closed %></td>
+        <% if recruiting_event.closed = "true" %>
+        <td> Yes </td>
+        <% elsif recruiting_event.closed = "false"%>
+        <td> No </td>
+        <% end %>
         <td>
           <% if recruiting_event.firm.present? %>
             <a href="/firms/<%= recruiting_event.firm.id %>">

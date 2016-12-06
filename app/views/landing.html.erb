@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<%= pie_chart Touchpoint.group(:user_id).count %>
+
+<%= @t = Touchpoint.where({ :user_id => current_user.id}).count %>
+<%= pie_chart({User.find_by(:id => current_user.id).username => @t, "Basketball" => 5}) %>
+
+
+    <%  @target_firm = TargetFirm.all %>
+      <% @target_firm.each do |target_firm| %>
+        <% if target_firm.user_id == current_user.id %>
+                <% @new_point = XyGraphShell.new %>
+                <% @new_point.x = target_firm.firm.name %>
+                <% @new_point.y = Touchpoint.where({ :firm_id => target_firm.firm_id, :user_id => target_firm.user_id}).count %>
+                <% @new_point.save %>
+        <% end %>
+      <% end %>
+    <%= column_chart XyGraphShell.group(:x).sum(:y), min: 0, max: 5 %>
+    <% XyGraphShell.delete_all %>
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+
+<head>
+<title>CanvasJS Chart jQuery Plugin</title>
+<script type="text/javascript" src="/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/script/jquery.canvasjs.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+
+//Better to construct options first and then pass it as a parameter
+	var options = {
+		title: {
+			text: "Column Chart using jQuery Plugin"
+		},
+                animationEnabled: true,
+		data: [
+		{
+			type: "column", //change it to line, area, bar, pie, etc
+			dataPoints: [
+				{ x: 10, y: 10 },
+				{ x: 20, y: 11 },
+				{ x: 30, y: 14 },
+				{ x: 40, y: 16 },
+				{ x: 50, y: 19 },
+				{ x: 60, y: 15 },
+				{ x: 70, y: 12 },
+				{ x: 80, y: 10 }
+			]
+		}
+		]
+	};
+
+	$("#chartContainer").CanvasJSChart(options);
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+
+</html> -->

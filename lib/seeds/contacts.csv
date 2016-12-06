@@ -1,0 +1,41 @@
+first_name,last_name,firm_id,group,division,title,photo,business_card,email,phone_number,privacy,alma_mater
+Chris,Cole,13,Debt Capital Markets (DCM),Investment Banking (IBD),Vice President,placeholder,placeholder,Chris.Cole@bank.com,(562) 519-5522,NO,Booth
+Cathy,Craft,2,Paper Packaging,Investment Banking (IBD),Partner,placeholder,placeholder,Cathy.Craft@bank.com,(291) 923-9275,NO,Wharton
+Charles,Seez,4,Media,Investment Banking (IBD),Director,placeholder,placeholder,Charles.Seez@bank.com,(721) 529-3299,YES,HBS
+Samantha,Mishen,11,Transportation,Investment Banking (IBD),Vice President,placeholder,placeholder,Samantha.Mishen@bank.com,(455) 217-7472,NO,Booth
+Alex,March,12,Restructuring,Investment Banking (IBD),Partner,placeholder,placeholder,Alex.March@bank.com,(851) 316-5125,NO,MIT
+Richard,Camile,3,Automotive,Investment Banking (IBD),Director,placeholder,placeholder,Richard.Camile@bank.com,(799) 669-1261,NO,HBS
+Wesley,Rosen,1,Transportation,Investment Banking (IBD),Director,placeholder,placeholder,Wesley.Rosen@bank.com,(182) 764-5398,NO,Columbia
+Alexandra,Bell,2,Consumer & Retail,Investment Banking (IBD),Vice President,placeholder,placeholder,Alexandra.Bell@bank.com,(196) 226-3124,NO,HBS
+Michael,Yamanue,17,Equity Capital Markets (ECM),Investment Banking (IBD),Senior Managing Director,placeholder,placeholder,Michael.Yamanue@bank.com,(618) 554-1525,YES,Columbia
+Daniel,Hill,2,Aerospace and Defense,Investment Banking (IBD),Vice President,placeholder,placeholder,Daniel.Hill@bank.com,(335) 698-8835,YES,Columbia
+Susana,Hettemine,17,Telecom,Investment Banking (IBD),Senior Managing Director,placeholder,placeholder,Susana.Hettemine@bank.com,(766) 577-4792,YES,MIT
+Carley,Veseun,5,Media,Investment Banking (IBD),Partner,placeholder,placeholder,Carley.Veseun@bank.com,(832) 487-7854,NO,MIT
+Mary,Foster,2,Media,Investment Banking (IBD),Managing Director,placeholder,placeholder,Mary.Foster@bank.com,(181) 947-2893,YES,HBS
+Michelle,Daniels,1,Restructuring,Investment Banking (IBD),Managing Director,placeholder,placeholder,Michelle.Daniels@bank.com,(136) 216-9843,YES,HBS
+James,Van Patten,16,Paper Packaging,Investment Banking (IBD),Executive Director,placeholder,placeholder,James.Van Patten@bank.com,(627) 439-4512,YES,Columbia
+Johnathan,Carlyle,5,Debt Capital Markets (DCM),Investment Banking (IBD),Associate,placeholder,placeholder,Johnathan.Carlyle@bank.com,(337) 163-6611,YES,HBS
+Scott,Goldberg,15,Restructuring,Investment Banking (IBD),Partner,placeholder,placeholder,Scott.Goldberg@bank.com,(815) 485-4477,NO,Columbia
+Steph,Goldstein,12,Aerospace and Defense,Investment Banking (IBD),Managing Director,placeholder,placeholder,Steph.Goldstein@bank.com,(885) 592-8689,NO,Wharton
+Mark,Kazamer,15,Aerospace and Defense,Investment Banking (IBD),Partner,placeholder,placeholder,Mark.Kazamer@bank.com,(335) 983-3837,YES,Wharton
+Sammy,Cassis,18,Transportation,Investment Banking (IBD),Associate,placeholder,placeholder,Sammy.Cassis@bank.com,(859) 596-4586,NO,Columbia
+Rich,Ulman,11,Financial Institutions (FIG),Investment Banking (IBD),Managing Director,placeholder,placeholder,Rich.Ulman@bank.com,(822) 365-5138,YES,Columbia
+Simon,Ulrich,16,Natural Resource,Investment Banking (IBD),Director,placeholder,placeholder,Simon.Ulrich@bank.com,(472) 794-7911,YES,Wharton
+Jon,Coreley,5,Restructuring,Investment Banking (IBD),Partner,placeholder,placeholder,Jon.Coreley@bank.com,(387) 634-4768,YES,Booth
+Billy,Amato,10,Paper Packaging,Investment Banking (IBD),Vice President,placeholder,placeholder,Billy.Amato@bank.com,(862) 277-8879,YES,Booth
+Bob,Quethein,11,Equity Capital Markets (ECM),Investment Banking (IBD),Vice President,placeholder,placeholder,Bob.Quethein@bank.com,(468) 446-2671,NO,Columbia
+Roger,Pollar,1,Automotive,Investment Banking (IBD),Partner,placeholder,placeholder,Roger.Pollar@bank.com,(295) 796-4879,NO,Booth
+Stephen,Pangen,9,Media,Investment Banking (IBD),Director,placeholder,placeholder,Stephen.Pangen@bank.com,(816) 653-6197,NO,Wharton
+Sterling,Torchlight,15,Healthcare,Investment Banking (IBD),Executive Director,placeholder,placeholder,Sterling.Torchlight@bank.com,(338) 318-6387,YES,Wharton
+Sue,Forscythe,17,Telecom,Investment Banking (IBD),Associate,placeholder,placeholder,Sue.Forscythe@bank.com,(999) 264-3879,NO,HBS
+Christina,Rockefeller,18,Equity Capital Markets (ECM),Investment Banking (IBD),Associate,placeholder,placeholder,Christina.Rockefeller@bank.com,(896) 548-2875,NO,Booth
+Kathleen,West,2,Debt Capital Markets (DCM),Investment Banking (IBD),Senior Managing Director,placeholder,placeholder,Kathleen.West@bank.com,(373) 499-2597,YES,HBS
+Caroline,Eastman,15,Restructuring,Investment Banking (IBD),Vice President,placeholder,placeholder,Caroline.Eastman@bank.com,(649) 882-6482,NO,Wharton
+Terri,Best,17,Media,Investment Banking (IBD),Partner,placeholder,placeholder,Terri.Best@bank.com,(995) 499-8647,NO,Booth
+Juliet,Southman,1,Consumer & Retail,Investment Banking (IBD),Partner,placeholder,placeholder,Juliet.Southman@bank.com,(212) 288-6259,YES,HBS
+Javier,Fez,17,Natural Resource,Investment Banking (IBD),Partner,placeholder,placeholder,Javier.Fez@bank.com,(172) 837-8631,NO,HBS
+Miguel,Mansato,14,Consumer & Retail,Investment Banking (IBD),Senior Managing Director,placeholder,placeholder,Miguel.Mansato@bank.com,(245) 118-1738,YES,Columbia
+Fred,Kacher,15,Infrastructure,Investment Banking (IBD),Director,placeholder,placeholder,Fred.Kacher@bank.com,(755) 348-3865,NO,MIT
+Eugene,Toolsey,8,Transportation,Investment Banking (IBD),Associate,placeholder,placeholder,Eugene.Toolsey@bank.com,(246) 887-5861,NO,Columbia
+David,Dachetti,3,Natural Resource,Investment Banking (IBD),Partner,placeholder,placeholder,David.Dachetti@bank.com,(781) 186-7222,YES,Wharton
+Brant,Brockman,9,Financial Institutions (FIG),Investment Banking (IBD),Associate,placeholder,placeholder,Brant.Brockman@bank.com,(555) 777-8545,NO,Wharton

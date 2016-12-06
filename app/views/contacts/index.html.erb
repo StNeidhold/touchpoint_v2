@@ -156,27 +156,34 @@
 <div class="row">
   <div class="col-md-12">
     <table class="table table-striped table-hover">
+
       <tr>
-        <th>First name</th>
-        <th>Last name</th>
+        <th>Name</th>
         <th>Firm</th>
         <th>Group</th>
         <th>Division</th>
         <th>Title</th>
+        <!--
         <th>Photo</th>
         <th>Business card</th>
+        -->
+        <th>B-School</th>
         <th>Email</th>
         <th>Phone number</th>
         <th>Actions</th>
       </tr>
 
       <% @contacts.each do |contact| %>
+
       <tr>
-        <td><%= contact.first_name %></td>
-        <td><%= contact.last_name %></td>
+        <td>
+          <a href="/contacts/<%= contact.id %>">
+            <%= contact.full_name %>
+          </a>
+        </td>
         <td>
           <% if contact.firm.present? %>
-            <a href="/firms/<%= contact.firm.id %>">
+            <a href="/firms/<%= contact.firm_id %>">
               <%= contact.firm.name %>
             </a>
           <% end %>
@@ -184,8 +191,9 @@
         <td><%= contact.group %></td>
         <td><%= contact.division %></td>
         <td><%= contact.title %></td>
-        <td><%= contact.photo %></td>
-        <td><%= contact.business_card %></td>
+        <!-- <td><%= contact.photo %></td>
+        <td><%= contact.business_card %></td> -->
+        <td><%= contact.alma_mater %></td>
         <td><%= contact.email %></td>
         <td><%= contact.phone_number %></td>
         <td>

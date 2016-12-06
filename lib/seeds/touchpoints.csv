@@ -1,0 +1,501 @@
+date,time,user_id,contact_id,firm_id,description,location,notes,privacy
+4/22/2016,13:02,99,4,6,filler description,Off-Campus Recruiting Event,None,YES
+6/13/2016,7:51,74,15,12,filler description,Phone Informational,None,YES
+11/6/2016,18:13,99,24,14,filler description,Bank Week Event,None,NO
+8/25/2016,18:39,49,5,10,filler description,Bank Week Event,None,YES
+10/10/2016,7:17,74,24,17,filler description,Meet and Greet (Harper Center),None,NO
+8/16/2016,11:14,18,40,6,filler description,Bank Week Event,None,YES
+11/13/2016,15:12,23,16,11,filler description,Off-Campus Recruiting Event,None,NO
+3/25/2016,18:33,51,24,1,filler description,Corporate Conversation,None,NO
+8/15/2016,7:36,64,33,7,filler description,Coffee Chat,None,YES
+8/26/2016,19:28,35,29,7,filler description,Coffee Chat,None,NO
+11/4/2016,21:23,50,15,16,filler description,Meet and Greet (Harper Center),None,NO
+5/8/2016,14:47,82,29,16,filler description,Bank Week Event,None,NO
+8/17/2016,18:16,17,39,18,filler description,Harper Center,None,YES
+7/21/2016,7:02,5,14,14,filler description,Bank Week Event,None,NO
+6/17/2016,16:49,77,6,4,filler description,Corporate Conversation,None,NO
+6/27/2016,7:32,95,24,3,filler description,Harper Center,None,YES
+1/9/2016,13:38,71,20,14,filler description,Off-Campus Recruiting Event,None,YES
+1/20/2016,8:45,38,6,5,filler description,Other,None,YES
+4/6/2016,21:09,74,26,2,filler description,Phone Informational,None,YES
+1/8/2016,12:25,95,40,11,filler description,Meet and Greet (Harper Center),None,YES
+3/1/2016,17:50,43,26,13,filler description,Harper Center,None,NO
+1/25/2016,12:55,84,2,17,filler description,Harper Center,None,NO
+7/13/2016,17:30,32,11,17,filler description,Corporate Conversation,None,NO
+12/9/2016,11:09,80,36,12,filler description,Phone Informational,None,NO
+3/4/2016,9:08,24,39,11,filler description,Harper Center,None,NO
+6/14/2016,19:39,75,23,16,filler description,Other,None,YES
+12/7/2016,9:31,17,39,1,filler description,Other,None,YES
+4/4/2016,9:01,67,27,2,filler description,Off-Campus Recruiting Event,None,YES
+7/12/2016,18:02,79,14,12,filler description,Other,None,YES
+11/21/2016,21:31,16,24,8,filler description,Off-Campus Recruiting Event,None,YES
+1/10/2016,11:30,53,5,4,filler description,Corporate Conversation,None,YES
+8/27/2016,18:40,37,20,10,filler description,Bank Week Event,None,YES
+8/18/2016,18:22,12,34,16,filler description,Off-Campus Recruiting Event,None,NO
+7/18/2016,18:47,4,2,11,filler description,Phone Informational,None,NO
+5/20/2016,17:39,59,38,13,filler description,Meet and Greet (Harper Center),None,YES
+5/14/2016,11:50,99,40,5,filler description,Meet and Greet (Harper Center),None,YES
+8/9/2016,0.583333333,36,34,18,filler description,Coffee Chat,None,YES
+12/23/2016,20:36,85,31,12,filler description,Coffee Chat,None,YES
+1/25/2016,10:17,12,6,4,filler description,Other,None,YES
+12/24/2016,15:01,11,40,5,filler description,Phone Informational,None,YES
+2/21/2016,15:41,66,11,2,filler description,Meet and Greet (Harper Center),None,YES
+8/1/2016,13:49,50,27,15,filler description,Harper Center,None,YES
+6/29/2016,16:42,3,3,8,filler description,Coffee Chat,None,YES
+1/15/2016,17:19,53,27,5,filler description,Harper Center,None,NO
+7/2/2016,7:15,34,3,1,filler description,Bank Week Event,None,YES
+6/27/2016,13:34,6,23,17,filler description,Coffee Chat,None,NO
+12/26/2016,12:50,18,28,12,filler description,Harper Center,None,NO
+6/14/2016,12:29,34,15,16,filler description,Meet and Greet (Harper Center),None,NO
+9/12/2016,20:43,58,25,2,filler description,Corporate Conversation,None,NO
+6/19/2016,13:33,34,14,4,filler description,Phone Informational,None,YES
+8/13/2016,14:58,65,20,7,filler description,Harper Center,None,NO
+10/26/2016,18:46,43,13,6,filler description,Meet and Greet (Harper Center),None,NO
+8/30/2016,18:47,64,33,13,filler description,Other,None,YES
+10/22/2016,19:09,25,29,1,filler description,Corporate Conversation,None,YES
+6/17/2016,10:13,60,40,10,filler description,Off-Campus Recruiting Event,None,YES
+9/19/2016,10:13,2,22,14,filler description,Off-Campus Recruiting Event,None,NO
+11/7/2016,20:49,82,2,14,filler description,Other,None,YES
+9/11/2016,16:56,86,26,5,filler description,Corporate Conversation,None,NO
+8/3/2016,7:45,77,14,13,filler description,Harper Center,None,YES
+1/27/2016,18:45,60,15,17,filler description,Off-Campus Recruiting Event,None,YES
+5/26/2016,10:14,17,7,11,filler description,Off-Campus Recruiting Event,None,NO
+8/5/2016,7:48,80,13,15,filler description,Corporate Conversation,None,NO
+4/1/2016,7:48,27,34,2,filler description,Meet and Greet (Harper Center),None,NO
+8/28/2016,16:59,98,25,1,filler description,Meet and Greet (Harper Center),None,YES
+10/2/2016,10:11,57,1,1,filler description,Harper Center,None,NO
+12/30/2016,15:19,37,15,3,filler description,Coffee Chat,None,NO
+8/5/2016,11:58,53,5,10,filler description,Off-Campus Recruiting Event,None,NO
+2/13/2016,18:21,98,13,9,filler description,Off-Campus Recruiting Event,None,NO
+2/8/2016,7:47,83,5,15,filler description,Phone Informational,None,NO
+11/14/2016,8:56,51,28,5,filler description,Meet and Greet (Harper Center),None,NO
+3/17/2016,7:18,36,17,2,filler description,Corporate Conversation,None,YES
+11/26/2016,13:16,58,5,17,filler description,Off-Campus Recruiting Event,None,NO
+11/29/2016,17:32,4,29,4,filler description,Corporate Conversation,None,NO
+12/10/2016,19:14,58,32,6,filler description,Coffee Chat,None,NO
+10/30/2016,8:49,59,21,6,filler description,Off-Campus Recruiting Event,None,YES
+7/18/2016,7:16,92,5,10,filler description,Phone Informational,None,NO
+7/24/2016,9:32,56,37,4,filler description,Coffee Chat,None,NO
+4/22/2016,21:31,58,24,15,filler description,Coffee Chat,None,YES
+6/4/2016,14:06,59,24,10,filler description,Phone Informational,None,NO
+1/14/2016,9:13,42,16,17,filler description,Harper Center,None,NO
+5/13/2016,10:44,100,23,4,filler description,Other,None,NO
+11/9/2016,8:33,49,27,7,filler description,Off-Campus Recruiting Event,None,YES
+1/21/2016,8:20,67,2,16,filler description,Bank Week Event,None,NO
+8/16/2016,13:14,70,14,4,filler description,Meet and Greet (Harper Center),None,YES
+5/28/2016,10:55,79,31,5,filler description,Phone Informational,None,NO
+11/7/2016,14:56,37,5,7,filler description,Phone Informational,None,YES
+5/15/2016,18:23,77,4,6,filler description,Bank Week Event,None,YES
+10/13/2016,15:41,66,12,5,filler description,Corporate Conversation,None,NO
+4/21/2016,21:02,23,18,14,filler description,Harper Center,None,NO
+5/28/2016,17:18,42,3,10,filler description,Other,None,NO
+1/1/2016,17:10,17,2,5,filler description,Bank Week Event,None,YES
+10/28/2016,19:05,7,13,4,filler description,Corporate Conversation,None,YES
+6/26/2016,12:39,27,37,9,filler description,Bank Week Event,None,YES
+9/20/2016,9:23,82,9,11,filler description,Other,None,YES
+12/13/2016,14:24,16,13,14,filler description,Harper Center,None,NO
+8/17/2016,17:49,87,37,3,filler description,Phone Informational,None,YES
+12/23/2016,10:23,82,36,1,filler description,Harper Center,None,YES
+7/13/2016,10:16,77,10,4,filler description,Meet and Greet (Harper Center),None,YES
+12/11/2016,13:06,52,14,10,filler description,Harper Center,None,YES
+3/22/2016,21:37,37,22,14,filler description,Phone Informational,None,YES
+8/30/2016,15:47,65,6,5,filler description,Meet and Greet (Harper Center),None,NO
+2/25/2016,16:56,6,25,1,filler description,Coffee Chat,None,YES
+1/29/2016,8:42,23,25,15,filler description,Coffee Chat,None,YES
+6/4/2016,18:10,32,23,7,filler description,Bank Week Event,None,NO
+8/23/2016,14:17,98,22,16,filler description,Corporate Conversation,None,YES
+12/30/2016,21:39,55,34,16,filler description,Meet and Greet (Harper Center),None,NO
+7/21/2016,19:23,27,17,16,filler description,Meet and Greet (Harper Center),None,YES
+8/13/2016,15:04,23,36,7,filler description,Bank Week Event,None,NO
+7/24/2016,16:57,57,4,13,filler description,Other,None,NO
+3/25/2016,9:24,44,40,6,filler description,Corporate Conversation,None,YES
+10/10/2016,16:09,49,36,17,filler description,Corporate Conversation,None,YES
+12/7/2016,14:41,67,8,11,filler description,Phone Informational,None,NO
+2/12/2016,7:05,64,16,10,filler description,Phone Informational,None,YES
+4/25/2016,15:46,75,29,14,filler description,Phone Informational,None,NO
+11/27/2016,11:02,44,21,3,filler description,Meet and Greet (Harper Center),None,NO
+7/26/2016,9:06,70,22,10,filler description,Coffee Chat,None,NO
+4/16/2016,7:29,51,18,3,filler description,Coffee Chat,None,NO
+9/7/2016,20:24,14,33,15,filler description,Bank Week Event,None,NO
+6/30/2016,12:32,99,3,18,filler description,Harper Center,None,NO
+5/7/2016,20:14,4,18,5,filler description,Harper Center,None,NO
+5/18/2016,14:55,9,20,14,filler description,Coffee Chat,None,YES
+10/12/2016,12:20,73,38,2,filler description,Harper Center,None,NO
+2/11/2016,16:05,44,4,9,filler description,Off-Campus Recruiting Event,None,YES
+7/8/2016,9:10,7,38,11,filler description,Phone Informational,None,YES
+6/30/2016,18:39,68,37,9,filler description,Corporate Conversation,None,YES
+1/16/2016,12:17,47,10,13,filler description,Corporate Conversation,None,YES
+4/8/2016,7:30,90,7,4,filler description,Other,None,YES
+1/7/2016,20:09,51,15,9,filler description,Other,None,NO
+4/1/2016,21:30,78,22,8,filler description,Meet and Greet (Harper Center),None,NO
+7/23/2016,16:55,22,38,15,filler description,Meet and Greet (Harper Center),None,NO
+3/20/2016,10:52,31,25,10,filler description,Corporate Conversation,None,NO
+12/14/2016,12:32,78,20,11,filler description,Off-Campus Recruiting Event,None,YES
+5/22/2016,15:19,100,11,14,filler description,Meet and Greet (Harper Center),None,YES
+5/19/2016,19:23,81,18,9,filler description,Meet and Greet (Harper Center),None,YES
+12/3/2016,19:13,66,5,4,filler description,Harper Center,None,NO
+6/29/2016,18:37,1,18,9,filler description,Harper Center,None,NO
+2/27/2016,18:29,69,25,8,filler description,Meet and Greet (Harper Center),None,NO
+9/11/2016,19:16,18,4,13,filler description,Other,None,NO
+7/27/2016,20:09,80,14,12,filler description,Harper Center,None,YES
+6/28/2016,21:28,91,22,10,filler description,Off-Campus Recruiting Event,None,NO
+1/8/2016,19:13,29,7,8,filler description,Harper Center,None,NO
+5/14/2016,19:39,100,5,18,filler description,Other,None,YES
+4/16/2016,18:51,74,22,14,filler description,Phone Informational,None,NO
+2/16/2016,16:26,3,25,12,filler description,Coffee Chat,None,NO
+3/2/2016,7:47,61,21,17,filler description,Harper Center,None,YES
+5/22/2016,13:18,81,22,15,filler description,Phone Informational,None,YES
+4/21/2016,8:25,95,7,6,filler description,Off-Campus Recruiting Event,None,NO
+2/13/2016,12:43,2,9,10,filler description,Off-Campus Recruiting Event,None,YES
+8/21/2016,7:50,13,22,12,filler description,Coffee Chat,None,NO
+5/12/2016,12:35,65,40,18,filler description,Phone Informational,None,NO
+10/1/2016,12:37,9,11,1,filler description,Coffee Chat,None,NO
+1/9/2016,19:47,95,6,8,filler description,Off-Campus Recruiting Event,None,YES
+11/4/2016,15:04,81,28,12,filler description,Meet and Greet (Harper Center),None,NO
+10/22/2016,16:21,67,29,4,filler description,Phone Informational,None,NO
+4/18/2016,7:03,56,38,11,filler description,Other,None,YES
+4/14/2016,14:16,90,12,13,filler description,Meet and Greet (Harper Center),None,YES
+8/4/2016,16:45,5,7,7,filler description,Off-Campus Recruiting Event,None,YES
+7/3/2016,16:51,78,35,4,filler description,Bank Week Event,None,NO
+4/8/2016,15:21,14,23,16,filler description,Off-Campus Recruiting Event,None,NO
+2/16/2016,11:40,98,13,10,filler description,Phone Informational,None,NO
+6/11/2016,8:18,22,35,1,filler description,Meet and Greet (Harper Center),None,YES
+9/30/2016,13:44,79,11,14,filler description,Corporate Conversation,None,YES
+7/21/2016,15:18,41,22,18,filler description,Harper Center,None,YES
+10/14/2016,14:53,6,18,3,filler description,Bank Week Event,None,YES
+8/3/2016,14:48,4,18,12,filler description,Phone Informational,None,YES
+10/1/2016,17:05,32,8,10,filler description,Corporate Conversation,None,NO
+8/27/2016,12:20,44,4,18,filler description,Meet and Greet (Harper Center),None,NO
+2/22/2016,8:43,9,7,17,filler description,Meet and Greet (Harper Center),None,NO
+5/28/2016,21:19,3,29,18,filler description,Corporate Conversation,None,NO
+11/12/2016,13:50,15,19,2,filler description,Coffee Chat,None,YES
+4/12/2016,8:55,98,12,13,filler description,Meet and Greet (Harper Center),None,YES
+12/18/2016,11:42,93,18,3,filler description,Other,None,YES
+7/19/2016,20:42,92,40,10,filler description,Harper Center,None,NO
+2/18/2016,17:24,79,33,2,filler description,Phone Informational,None,YES
+5/21/2016,7:27,63,14,10,filler description,Harper Center,None,NO
+3/12/2016,7:27,37,40,5,filler description,Off-Campus Recruiting Event,None,YES
+6/22/2016,16:30,39,10,16,filler description,Phone Informational,None,YES
+9/8/2016,19:09,18,22,9,filler description,Bank Week Event,None,YES
+10/30/2016,7:36,78,2,9,filler description,Harper Center,None,NO
+6/8/2016,7:42,51,38,11,filler description,Coffee Chat,None,NO
+2/7/2016,21:22,97,13,1,filler description,Off-Campus Recruiting Event,None,YES
+3/24/2016,17:47,84,25,1,filler description,Bank Week Event,None,YES
+10/14/2016,20:16,25,31,11,filler description,Other,None,YES
+10/11/2016,14:19,20,36,3,filler description,Corporate Conversation,None,NO
+7/17/2016,9:28,78,6,11,filler description,Meet and Greet (Harper Center),None,YES
+3/3/2016,8:50,59,25,11,filler description,Bank Week Event,None,NO
+10/2/2016,15:27,63,38,16,filler description,Other,None,YES
+5/15/2016,14:48,30,39,8,filler description,Bank Week Event,None,NO
+4/13/2016,13:33,14,4,7,filler description,Meet and Greet (Harper Center),None,NO
+4/17/2016,10:38,50,39,9,filler description,Off-Campus Recruiting Event,None,YES
+6/5/2016,21:36,40,34,8,filler description,Bank Week Event,None,YES
+11/9/2016,12:33,80,2,3,filler description,Other,None,YES
+5/4/2016,17:59,2,17,11,filler description,Phone Informational,None,NO
+11/19/2016,18:54,26,26,12,filler description,Corporate Conversation,None,NO
+6/29/2016,15:16,64,19,9,filler description,Off-Campus Recruiting Event,None,NO
+6/12/2016,9:48,10,37,4,filler description,Coffee Chat,None,YES
+7/5/2016,13:39,76,1,1,filler description,Other,None,NO
+9/18/2016,21:50,14,35,3,filler description,Bank Week Event,None,YES
+4/9/2016,7:57,51,2,18,filler description,Bank Week Event,None,YES
+6/7/2016,19:21,10,7,16,filler description,Other,None,NO
+3/7/2016,8:26,11,6,17,filler description,Corporate Conversation,None,NO
+11/11/2016,10:02,96,15,7,filler description,Other,None,NO
+8/3/2016,16:38,46,36,7,filler description,Bank Week Event,None,NO
+2/14/2016,19:52,55,2,11,filler description,Coffee Chat,None,YES
+11/5/2016,16:02,33,15,17,filler description,Off-Campus Recruiting Event,None,YES
+8/23/2016,14:03,6,23,13,filler description,Off-Campus Recruiting Event,None,NO
+1/5/2016,7:53,31,2,3,filler description,Bank Week Event,None,NO
+6/28/2016,12:32,30,32,14,filler description,Meet and Greet (Harper Center),None,YES
+2/25/2016,19:48,1,14,3,filler description,Corporate Conversation,None,NO
+6/16/2016,8:32,83,38,10,filler description,Harper Center,None,NO
+12/14/2016,9:06,62,23,8,filler description,Phone Informational,None,NO
+5/25/2016,15:12,59,11,12,filler description,Harper Center,None,YES
+9/13/2016,10:15,14,23,13,filler description,Off-Campus Recruiting Event,None,NO
+7/20/2016,20:27,48,4,13,filler description,Corporate Conversation,None,NO
+3/16/2016,20:02,44,3,16,filler description,Phone Informational,None,YES
+10/23/2016,12:40,14,12,17,filler description,Coffee Chat,None,YES
+3/17/2016,13:23,50,11,12,filler description,Bank Week Event,None,YES
+7/5/2016,19:56,65,9,5,filler description,Other,None,YES
+3/6/2016,18:57,17,23,17,filler description,Harper Center,None,YES
+1/20/2016,14:48,70,8,9,filler description,Coffee Chat,None,NO
+5/1/2016,15:15,57,19,1,filler description,Phone Informational,None,NO
+2/14/2016,13:25,33,36,14,filler description,Off-Campus Recruiting Event,None,NO
+5/7/2016,16:43,39,31,7,filler description,Off-Campus Recruiting Event,None,YES
+3/10/2016,15:54,73,17,11,filler description,Corporate Conversation,None,YES
+4/26/2016,10:07,42,27,7,filler description,Harper Center,None,YES
+12/10/2016,18:37,3,22,16,filler description,Other,None,NO
+2/12/2016,15:49,57,36,8,filler description,Coffee Chat,None,NO
+3/3/2016,16:30,90,35,3,filler description,Meet and Greet (Harper Center),None,YES
+2/9/2016,12:23,87,28,18,filler description,Meet and Greet (Harper Center),None,NO
+12/27/2016,17:01,11,4,1,filler description,Phone Informational,None,NO
+5/8/2016,16:25,83,37,12,filler description,Corporate Conversation,None,NO
+12/20/2016,10:28,59,22,12,filler description,Corporate Conversation,None,YES
+11/6/2016,10:17,45,36,11,filler description,Meet and Greet (Harper Center),None,NO
+12/30/2016,11:58,59,32,7,filler description,Corporate Conversation,None,NO
+7/2/2016,15:59,20,5,16,filler description,Off-Campus Recruiting Event,None,NO
+2/5/2016,21:40,24,20,7,filler description,Meet and Greet (Harper Center),None,NO
+7/25/2016,14:18,70,10,7,filler description,Harper Center,None,YES
+1/23/2016,15:23,37,19,8,filler description,Other,None,YES
+8/12/2016,10:04,14,28,5,filler description,Coffee Chat,None,YES
+11/26/2016,8:35,95,11,1,filler description,Coffee Chat,None,YES
+6/14/2016,7:36,10,25,4,filler description,Coffee Chat,None,NO
+11/14/2016,18:05,31,4,4,filler description,Meet and Greet (Harper Center),None,YES
+2/28/2016,20:08,43,26,4,filler description,Off-Campus Recruiting Event,None,YES
+12/15/2016,12:54,87,15,14,filler description,Phone Informational,None,YES
+6/22/2016,9:11,50,23,8,filler description,Other,None,NO
+12/4/2016,21:04,53,28,7,filler description,Other,None,YES
+10/29/2016,15:18,61,25,15,filler description,Coffee Chat,None,NO
+3/5/2016,21:46,23,28,14,filler description,Phone Informational,None,YES
+10/20/2016,13:09,60,21,13,filler description,Coffee Chat,None,NO
+4/10/2016,7:42,67,19,5,filler description,Corporate Conversation,None,YES
+2/4/2016,16:27,92,17,13,filler description,Harper Center,None,YES
+11/25/2016,11:27,19,9,9,filler description,Harper Center,None,NO
+12/7/2016,11:49,1,12,11,filler description,Harper Center,None,YES
+8/19/2016,7:05,75,1,7,filler description,Coffee Chat,None,NO
+9/24/2016,15:33,29,7,13,filler description,Meet and Greet (Harper Center),None,NO
+3/17/2016,0.625,27,20,9,filler description,Corporate Conversation,None,NO
+2/16/2016,8:48,94,20,16,filler description,Off-Campus Recruiting Event,None,NO
+3/9/2016,17:14,32,35,8,filler description,Bank Week Event,None,NO
+12/9/2016,20:08,45,27,7,filler description,Bank Week Event,None,YES
+2/16/2016,20:01,81,24,11,filler description,Off-Campus Recruiting Event,None,YES
+10/13/2016,7:04,39,12,8,filler description,Bank Week Event,None,YES
+6/2/2016,7:38,35,36,4,filler description,Phone Informational,None,NO
+4/13/2016,10:34,45,16,16,filler description,Phone Informational,None,YES
+10/14/2016,11:31,100,3,7,filler description,Other,None,NO
+7/16/2016,21:24,88,4,5,filler description,Corporate Conversation,None,YES
+3/1/2016,17:25,41,15,8,filler description,Other,None,NO
+12/28/2016,18:26,62,11,7,filler description,Coffee Chat,None,NO
+4/26/2016,10:46,78,7,7,filler description,Other,None,NO
+4/14/2016,21:22,43,18,7,filler description,Phone Informational,None,NO
+10/29/2016,18:51,88,24,12,filler description,Coffee Chat,None,YES
+2/15/2016,8:03,63,34,4,filler description,Corporate Conversation,None,NO
+11/17/2016,7:20,3,15,16,filler description,Meet and Greet (Harper Center),None,YES
+6/7/2016,21:57,44,32,5,filler description,Bank Week Event,None,NO
+12/15/2016,14:50,38,23,18,filler description,Corporate Conversation,None,YES
+6/27/2016,11:12,74,32,8,filler description,Corporate Conversation,None,YES
+6/9/2016,19:43,61,29,5,filler description,Off-Campus Recruiting Event,None,NO
+4/30/2016,7:22,47,26,3,filler description,Meet and Greet (Harper Center),None,YES
+1/20/2016,10:08,49,25,1,filler description,Harper Center,None,NO
+5/10/2016,12:52,37,28,12,filler description,Meet and Greet (Harper Center),None,NO
+10/13/2016,19:59,10,21,12,filler description,Harper Center,None,NO
+10/21/2016,7:35,68,3,17,filler description,Off-Campus Recruiting Event,None,NO
+10/15/2016,20:33,98,2,3,filler description,Bank Week Event,None,YES
+3/27/2016,11:47,68,24,11,filler description,Coffee Chat,None,NO
+8/18/2016,11:59,11,5,9,filler description,Meet and Greet (Harper Center),None,NO
+1/13/2016,20:46,22,8,17,filler description,Phone Informational,None,YES
+7/30/2016,21:24,86,30,17,filler description,Bank Week Event,None,YES
+1/12/2016,8:31,57,10,2,filler description,Coffee Chat,None,NO
+8/5/2016,17:37,83,10,1,filler description,Corporate Conversation,None,YES
+4/30/2016,14:58,99,38,11,filler description,Phone Informational,None,YES
+7/1/2016,21:58,57,6,10,filler description,Meet and Greet (Harper Center),None,YES
+7/1/2016,15:55,24,12,10,filler description,Bank Week Event,None,NO
+12/7/2016,7:15,67,19,2,filler description,Off-Campus Recruiting Event,None,YES
+6/25/2016,7:49,47,24,10,filler description,Phone Informational,None,NO
+5/17/2016,8:19,16,25,7,filler description,Off-Campus Recruiting Event,None,NO
+5/12/2016,19:55,10,3,17,filler description,Other,None,YES
+2/12/2016,7:03,8,36,15,filler description,Meet and Greet (Harper Center),None,YES
+3/19/2016,12:34,70,10,15,filler description,Phone Informational,None,YES
+7/16/2016,9:34,32,37,4,filler description,Other,None,YES
+4/9/2016,17:30,49,9,12,filler description,Corporate Conversation,None,YES
+3/17/2016,17:25,7,22,18,filler description,Off-Campus Recruiting Event,None,NO
+12/4/2016,16:45,33,6,15,filler description,Bank Week Event,None,YES
+7/18/2016,15:04,54,26,17,filler description,Corporate Conversation,None,NO
+6/22/2016,9:47,69,28,2,filler description,Corporate Conversation,None,NO
+7/6/2016,11:14,32,37,6,filler description,Off-Campus Recruiting Event,None,YES
+8/25/2016,21:27,89,25,15,filler description,Bank Week Event,None,NO
+9/2/2016,12:27,38,17,1,filler description,Phone Informational,None,YES
+2/25/2016,13:58,40,39,13,filler description,Coffee Chat,None,YES
+12/1/2016,19:52,7,36,4,filler description,Bank Week Event,None,NO
+10/17/2016,0.333333333,34,23,16,filler description,Corporate Conversation,None,NO
+3/26/2016,17:10,52,12,3,filler description,Meet and Greet (Harper Center),None,NO
+5/21/2016,11:14,90,16,8,filler description,Off-Campus Recruiting Event,None,NO
+10/14/2016,16:09,8,6,10,filler description,Bank Week Event,None,NO
+8/23/2016,17:35,98,18,6,filler description,Phone Informational,None,NO
+4/16/2016,7:06,68,24,1,filler description,Bank Week Event,None,YES
+12/24/2016,12:17,65,17,16,filler description,Coffee Chat,None,NO
+10/4/2016,15:31,82,21,15,filler description,Other,None,NO
+1/28/2016,10:33,2,28,3,filler description,Meet and Greet (Harper Center),None,NO
+6/4/2016,8:20,68,20,8,filler description,Meet and Greet (Harper Center),None,NO
+9/21/2016,16:47,37,17,9,filler description,Other,None,YES
+10/2/2016,12:52,52,14,11,filler description,Coffee Chat,None,YES
+11/24/2016,13:50,56,28,4,filler description,Harper Center,None,YES
+9/18/2016,19:59,4,7,13,filler description,Harper Center,None,NO
+7/29/2016,21:47,100,30,2,filler description,Phone Informational,None,NO
+3/27/2016,10:01,82,38,3,filler description,Coffee Chat,None,NO
+5/9/2016,11:53,89,19,6,filler description,Corporate Conversation,None,YES
+4/26/2016,20:05,47,26,11,filler description,Meet and Greet (Harper Center),None,NO
+8/12/2016,7:28,71,38,3,filler description,Harper Center,None,YES
+11/16/2016,12:24,11,19,12,filler description,Bank Week Event,None,YES
+5/21/2016,10:19,61,17,10,filler description,Corporate Conversation,None,NO
+6/20/2016,13:53,51,8,15,filler description,Other,None,YES
+6/21/2016,10:45,89,28,4,filler description,Phone Informational,None,YES
+7/27/2016,12:09,1,21,2,filler description,Phone Informational,None,NO
+3/9/2016,21:21,85,8,9,filler description,Coffee Chat,None,NO
+8/15/2016,15:49,76,27,7,filler description,Other,None,NO
+3/17/2016,20:35,17,16,18,filler description,Other,None,YES
+9/7/2016,10:23,13,32,7,filler description,Phone Informational,None,NO
+1/4/2016,10:16,91,5,4,filler description,Other,None,NO
+5/16/2016,11:34,15,20,12,filler description,Harper Center,None,YES
+6/23/2016,16:01,53,34,6,filler description,Other,None,NO
+3/9/2016,9:51,60,20,18,filler description,Meet and Greet (Harper Center),None,NO
+9/24/2016,17:32,82,20,11,filler description,Corporate Conversation,None,YES
+5/25/2016,12:55,88,30,9,filler description,Coffee Chat,None,NO
+2/22/2016,17:43,35,7,12,filler description,Off-Campus Recruiting Event,None,NO
+5/2/2016,13:19,12,34,5,filler description,Corporate Conversation,None,NO
+1/14/2016,11:27,92,31,16,filler description,Phone Informational,None,NO
+4/27/2016,9:58,26,25,2,filler description,Harper Center,None,NO
+11/15/2016,10:21,80,9,6,filler description,Meet and Greet (Harper Center),None,NO
+12/21/2016,16:38,12,34,12,filler description,Bank Week Event,None,YES
+3/30/2016,8:37,8,34,9,filler description,Coffee Chat,None,YES
+7/2/2016,20:10,88,9,5,filler description,Corporate Conversation,None,NO
+5/14/2016,17:50,22,24,10,filler description,Corporate Conversation,None,YES
+2/18/2016,9:59,54,20,1,filler description,Meet and Greet (Harper Center),None,YES
+7/3/2016,11:17,21,31,17,filler description,Other,None,YES
+6/9/2016,21:21,35,29,7,filler description,Coffee Chat,None,YES
+12/29/2016,11:29,55,14,7,filler description,Harper Center,None,NO
+10/1/2016,8:25,19,1,3,filler description,Harper Center,None,NO
+1/29/2016,12:49,94,22,3,filler description,Harper Center,None,YES
+4/21/2016,16:19,37,19,8,filler description,Off-Campus Recruiting Event,None,NO
+3/27/2016,9:47,60,22,1,filler description,Coffee Chat,None,NO
+10/3/2016,16:53,15,17,10,filler description,Phone Informational,None,NO
+3/28/2016,18:38,50,10,16,filler description,Phone Informational,None,NO
+12/30/2016,16:28,95,13,13,filler description,Bank Week Event,None,YES
+10/23/2016,8:59,63,34,18,filler description,Meet and Greet (Harper Center),None,YES
+7/1/2016,10:32,69,4,3,filler description,Corporate Conversation,None,NO
+11/11/2016,18:30,62,16,16,filler description,Coffee Chat,None,YES
+8/21/2016,18:11,39,33,17,filler description,Phone Informational,None,YES
+1/27/2016,12:24,59,34,2,filler description,Phone Informational,None,NO
+5/15/2016,18:10,6,40,4,filler description,Meet and Greet (Harper Center),None,NO
+3/15/2016,17:31,16,20,13,filler description,Other,None,YES
+4/11/2016,12:53,66,40,3,filler description,Off-Campus Recruiting Event,None,NO
+4/8/2016,21:42,55,38,9,filler description,Other,None,YES
+8/12/2016,14:16,51,30,16,filler description,Phone Informational,None,NO
+7/25/2016,16:48,56,17,5,filler description,Harper Center,None,YES
+3/26/2016,16:35,71,9,18,filler description,Other,None,YES
+9/28/2016,8:28,63,27,11,filler description,Bank Week Event,None,YES
+1/20/2016,18:20,64,19,16,filler description,Other,None,YES
+9/24/2016,19:11,68,27,13,filler description,Other,None,NO
+3/18/2016,21:06,18,21,7,filler description,Corporate Conversation,None,NO
+3/22/2016,13:41,58,9,4,filler description,Meet and Greet (Harper Center),None,YES
+4/12/2016,20:04,26,36,12,filler description,Harper Center,None,NO
+1/23/2016,12:47,88,37,13,filler description,Phone Informational,None,NO
+9/1/2016,9:31,11,29,2,filler description,Bank Week Event,None,YES
+12/3/2016,16:18,91,6,10,filler description,Off-Campus Recruiting Event,None,YES
+9/1/2016,11:13,36,37,5,filler description,Other,None,YES
+7/12/2016,7:14,90,8,3,filler description,Other,None,NO
+4/2/2016,15:25,33,37,9,filler description,Bank Week Event,None,YES
+2/14/2016,21:45,15,14,3,filler description,Coffee Chat,None,NO
+12/10/2016,21:24,24,3,1,filler description,Other,None,YES
+10/21/2016,13:40,3,13,8,filler description,Phone Informational,None,YES
+2/26/2016,16:04,97,20,10,filler description,Corporate Conversation,None,NO
+6/11/2016,10:01,99,29,18,filler description,Harper Center,None,NO
+1/2/2016,19:43,94,33,18,filler description,Harper Center,None,YES
+1/7/2016,18:01,77,34,15,filler description,Off-Campus Recruiting Event,None,YES
+8/22/2016,17:44,67,4,10,filler description,Phone Informational,None,NO
+11/20/2016,15:53,95,21,6,filler description,Coffee Chat,None,NO
+12/19/2016,7:15,76,32,4,filler description,Coffee Chat,None,YES
+11/23/2016,8:55,29,14,2,filler description,Meet and Greet (Harper Center),None,YES
+5/27/2016,17:37,3,36,5,filler description,Phone Informational,None,NO
+1/21/2016,13:17,66,4,16,filler description,Meet and Greet (Harper Center),None,NO
+2/27/2016,10:14,56,13,5,filler description,Coffee Chat,None,NO
+3/16/2016,17:01,72,14,17,filler description,Bank Week Event,None,YES
+10/30/2016,20:14,2,31,17,filler description,Harper Center,None,NO
+10/23/2016,18:24,15,37,2,filler description,Other,None,NO
+8/17/2016,16:03,83,24,18,filler description,Bank Week Event,None,NO
+11/15/2016,16:39,73,15,11,filler description,Other,None,NO
+5/16/2016,14:27,43,37,9,filler description,Bank Week Event,None,YES
+11/25/2016,13:46,86,13,7,filler description,Coffee Chat,None,NO
+5/10/2016,9:04,16,21,3,filler description,Off-Campus Recruiting Event,None,YES
+11/10/2016,21:58,2,22,10,filler description,Meet and Greet (Harper Center),None,NO
+7/2/2016,13:08,10,8,9,filler description,Other,None,NO
+7/22/2016,13:43,68,36,7,filler description,Harper Center,None,YES
+10/5/2016,9:09,36,3,3,filler description,Phone Informational,None,NO
+1/1/2016,11:26,11,17,5,filler description,Corporate Conversation,None,NO
+2/17/2016,8:04,84,3,13,filler description,Off-Campus Recruiting Event,None,NO
+11/15/2016,0.333333333,77,19,9,filler description,Coffee Chat,None,YES
+7/14/2016,18:26,92,34,11,filler description,Off-Campus Recruiting Event,None,YES
+11/19/2016,12:17,97,6,8,filler description,Off-Campus Recruiting Event,None,NO
+1/7/2016,9:20,41,19,16,filler description,Meet and Greet (Harper Center),None,YES
+10/24/2016,14:53,47,26,12,filler description,Meet and Greet (Harper Center),None,YES
+11/14/2016,21:28,54,5,10,filler description,Other,None,YES
+1/6/2016,16:57,59,10,16,filler description,Corporate Conversation,None,YES
+9/22/2016,13:55,56,33,3,filler description,Harper Center,None,YES
+12/6/2016,16:14,12,23,12,filler description,Off-Campus Recruiting Event,None,YES
+5/25/2016,16:55,29,22,17,filler description,Coffee Chat,None,NO
+1/25/2016,18:24,15,8,18,filler description,Phone Informational,None,NO
+3/19/2016,21:32,94,33,1,filler description,Coffee Chat,None,YES
+1/25/2016,9:37,4,23,1,filler description,Other,None,YES
+9/2/2016,13:33,82,27,15,filler description,Corporate Conversation,None,NO
+8/1/2016,18:07,19,14,5,filler description,Other,None,YES
+10/20/2016,17:09,7,28,16,filler description,Bank Week Event,None,NO
+8/6/2016,14:27,33,21,17,filler description,Other,None,NO
+11/6/2016,14:33,88,31,5,filler description,Coffee Chat,None,YES
+10/1/2016,16:31,5,1,14,filler description,Corporate Conversation,None,YES
+4/10/2016,16:41,70,17,6,filler description,Off-Campus Recruiting Event,None,NO
+3/30/2016,12:53,1,28,16,filler description,Coffee Chat,None,YES
+12/21/2016,12:27,30,6,16,filler description,Other,None,NO
+12/24/2016,20:47,33,26,12,filler description,Other,None,NO
+10/8/2016,20:14,38,1,14,filler description,Meet and Greet (Harper Center),None,YES
+11/10/2016,13:32,26,4,4,filler description,Harper Center,None,NO
+6/14/2016,21:28,91,3,18,filler description,Phone Informational,None,YES
+5/19/2016,14:02,60,1,9,filler description,Bank Week Event,None,NO
+5/15/2016,9:48,100,36,11,filler description,Corporate Conversation,None,YES
+12/12/2016,16:23,6,34,2,filler description,Phone Informational,None,NO
+10/21/2016,8:45,25,4,7,filler description,Off-Campus Recruiting Event,None,NO
+7/9/2016,15:01,19,22,16,filler description,Phone Informational,None,YES
+5/20/2016,8:45,48,23,16,filler description,Off-Campus Recruiting Event,None,YES
+2/20/2016,0.625,22,34,5,filler description,Other,None,YES
+4/28/2016,14:11,44,35,7,filler description,Coffee Chat,None,YES
+6/1/2016,20:06,65,6,13,filler description,Phone Informational,None,YES
+2/25/2016,18:59,65,36,17,filler description,Bank Week Event,None,NO
+1/18/2016,10:26,10,25,10,filler description,Meet and Greet (Harper Center),None,YES
+2/17/2016,19:15,28,37,2,filler description,Corporate Conversation,None,YES
+6/23/2016,17:42,44,30,15,filler description,Corporate Conversation,None,YES
+8/1/2016,9:08,43,21,13,filler description,Off-Campus Recruiting Event,None,NO
+3/12/2016,13:49,44,35,3,filler description,Meet and Greet (Harper Center),None,NO
+1/14/2016,15:52,40,29,14,filler description,Meet and Greet (Harper Center),None,YES
+3/5/2016,10:32,73,14,4,filler description,Coffee Chat,None,YES
+7/9/2016,16:55,23,37,13,filler description,Bank Week Event,None,YES
+2/6/2016,13:03,6,20,5,filler description,Bank Week Event,None,NO
+1/10/2016,21:17,61,35,6,filler description,Coffee Chat,None,NO
+11/16/2016,21:57,82,15,4,filler description,Other,None,NO
+1/17/2016,19:15,14,9,1,filler description,Other,None,YES
+8/19/2016,15:22,41,34,18,filler description,Other,None,YES
+9/25/2016,14:31,49,3,17,filler description,Coffee Chat,None,YES
+8/30/2016,19:49,48,8,14,filler description,Coffee Chat,None,YES
+11/5/2016,10:25,47,27,6,filler description,Phone Informational,None,YES
+1/24/2016,15:40,18,27,1,filler description,Phone Informational,None,YES
+7/24/2016,18:29,50,15,4,filler description,Phone Informational,None,NO
+6/14/2016,12:42,58,40,3,filler description,Off-Campus Recruiting Event,None,NO
+8/6/2016,0.541666667,69,39,15,filler description,Corporate Conversation,None,NO
+4/7/2016,14:15,28,8,8,filler description,Harper Center,None,NO
+1/4/2016,16:53,36,11,6,filler description,Corporate Conversation,None,NO
+2/20/2016,19:37,14,16,1,filler description,Phone Informational,None,NO
+9/28/2016,10:36,89,39,15,filler description,Corporate Conversation,None,YES
+6/1/2016,20:58,8,30,5,filler description,Off-Campus Recruiting Event,None,NO
+7/10/2016,9:39,92,40,15,filler description,Coffee Chat,None,NO
+11/9/2016,21:40,94,27,3,filler description,Corporate Conversation,None,YES
+10/17/2016,9:12,6,38,15,filler description,Coffee Chat,None,NO
+9/16/2016,13:49,71,35,18,filler description,Harper Center,None,YES
+11/15/2016,18:06,76,15,15,filler description,Harper Center,None,NO
+11/24/2016,18:01,96,15,11,filler description,Phone Informational,None,YES
+12/9/2016,19:57,11,20,16,filler description,Other,None,YES
+8/25/2016,9:23,29,14,15,filler description,Meet and Greet (Harper Center),None,YES
+12/9/2016,21:09,30,22,14,filler description,Phone Informational,None,YES
+10/30/2016,18:57,99,9,3,filler description,Coffee Chat,None,YES
+5/16/2016,12:52,83,12,13,filler description,Coffee Chat,None,NO
+8/17/2016,15:47,92,35,8,filler description,Phone Informational,None,NO
+5/11/2016,21:08,19,38,15,filler description,Harper Center,None,YES
+2/10/2016,18:46,14,25,8,filler description,Other,None,NO
+12/15/2016,21:12,10,34,1,filler description,Harper Center,None,YES
+9/3/2016,0.916666667,13,37,14,filler description,Meet and Greet (Harper Center),None,NO
+11/18/2016,17:53,93,35,2,filler description,Harper Center,None,NO
+6/18/2016,16:50,71,33,14,filler description,Bank Week Event,None,YES
+12/9/2016,11:34,10,1,18,filler description,Coffee Chat,None,NO
+6/25/2016,18:22,79,13,15,filler description,Harper Center,None,NO
+2/1/2016,10:28,12,37,5,filler description,Meet and Greet (Harper Center),None,NO
+6/16/2016,16:41,9,1,13,filler description,Bank Week Event,None,YES
+6/4/2016,18:47,80,40,4,filler description,Phone Informational,None,NO
+9/17/2016,18:12,62,6,3,filler description,Bank Week Event,None,YES
+9/10/2016,18:24,50,37,10,filler description,Bank Week Event,None,NO

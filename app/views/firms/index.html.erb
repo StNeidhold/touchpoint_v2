@@ -18,6 +18,11 @@
     <%= f.text_field :process_type_cont, :class => "form-control", :placeholder => "Process type contains" %>
   </div>
 
+  <div class="form-group">
+      <%= f.label :league, "League contains" %>
+      <%= f.text_field :league, :class => "form-control", :placeholder => "League contains" %>
+    </div>
+
 <div class="form-group">
     <%= f.label :size_cont, "Size contains" %>
     <%= f.text_field :size_cont, :class => "form-control", :placeholder => "Size contains" %>
@@ -139,6 +144,7 @@
       <tr>
         <th>Name</th>
         <th>Industry</th>
+        <th>League</th>
         <th>Size</th>
         <th>Process type</th>
         <th>Actions</th>
@@ -148,6 +154,7 @@
       <tr>
         <td><%= firm.name %></td>
         <td><%= firm.industry %></td>
+        <td><%= firm.league %></td>
         <td><%= firm.size %></td>
         <td><%= firm.process_type %></td>
         <td>

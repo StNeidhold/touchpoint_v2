@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h3>Firm #<%= @firm.id %></h3>
+  <h3><%= @firm.name %></h3>
 </div>
 
 <div class="row">
@@ -10,6 +10,9 @@
 
       <dt>Industry</dt>
       <dd><%= @firm.industry %></dd>
+
+      <dt>League</dt>
+      <dd><%= @firm.league %></dd>
 
       <dt>Size</dt>
       <dd><%= @firm.size %></dd>

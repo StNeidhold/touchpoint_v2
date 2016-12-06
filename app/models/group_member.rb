@@ -10,4 +10,7 @@ class GroupMember < ApplicationRecord
 
   # Validations
 
+  validates :user_id, :presence => true, :uniqueness => { :scope => :group_id } #otherwise duplicate entry
+  validates :group_id, :presence => true
+
 end

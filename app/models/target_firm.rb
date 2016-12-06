@@ -8,5 +8,7 @@ class TargetFirm < ApplicationRecord
   # Indirect associations
 
   # Validations
+validates :user_id, :presence => true, :uniqueness => { :scope => :firm_id }
+validates :firm_id, :presence => true, :uniqueness => { :scope => :user_id }
 
 end

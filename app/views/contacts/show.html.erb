@@ -13,11 +13,12 @@
 
       <dt>Firm</dt>
       <dd>
-        <% if @contact.firm.present? %>
+        <%= @contact.firm.name %>
+        <!-- <% if @contact.firm.present? %>
           <a href="/firms/<%= @contact.firm_id %>">
             <%= @contact.firm.name %>
           </a>
-        <% end %>
+        <% end %> -->
       </dd>
 
       <dt>Group</dt>
@@ -29,11 +30,14 @@
       <dt>Title</dt>
       <dd><%= @contact.title %></dd>
 
-      <dt>Photo</dt>
+      <!-- <dt>Photo</dt>
       <dd><%= @contact.photo %></dd>
 
       <dt>Business card</dt>
-      <dd><%= @contact.business_card %></dd>
+      <dd><%= @contact.business_card %></dd> -->
+
+      <dt>B-School</dt>
+      <dd><%= @contact.alma_mater %></dd>
 
       <dt>Email</dt>
       <dd><%= @contact.email %></dd>

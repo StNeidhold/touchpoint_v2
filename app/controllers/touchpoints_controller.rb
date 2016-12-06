@@ -25,7 +25,8 @@ class TouchpointsController < ApplicationController
     @touchpoint.time = params[:time]
     @touchpoint.user_id = params[:user_id]
     @touchpoint.contact_id = params[:contact_id]
-    @touchpoint.firm_id = params[:firm_id]
+    # @touchpoint.firm_id = params[:firm_id]
+    @touchpoint.firm_id = Contact.find_by(:id => @touchpoint.contact_id).firm_id
     @touchpoint.description = params[:description]
     @touchpoint.location = params[:location]
     @touchpoint.notes = params[:notes]
@@ -56,7 +57,7 @@ class TouchpointsController < ApplicationController
     @touchpoint = Touchpoint.find(params[:id])
 
     @touchpoint.date = params[:date]
-    @touchpoint.time = params[:time]
+    # @touchpoint.time = params[:time]
     @touchpoint.user_id = params[:user_id]
     @touchpoint.contact_id = params[:contact_id]
     @touchpoint.firm_id = params[:firm_id]

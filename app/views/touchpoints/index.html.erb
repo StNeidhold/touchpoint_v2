@@ -168,11 +168,11 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-        <th>Date</th>
-        <th>Time</th>
-        <th>User</th>
         <th>Contact</th>
         <th>Firm</th>
+        <th>Date</th>
+        <!-- <th>Time</th> -->
+        <!-- <th>User</th> -->
         <th>Description</th>
         <th>Location</th>
         <th>Notes</th>
@@ -180,20 +180,12 @@
       </tr>
 
       <% @touchpoints.each do |touchpoint| %>
+      <% if touchpoint.user_id == current_user.id %>
       <tr>
-        <td><%= touchpoint.date %></td>
-        <td><%= touchpoint.time %></td>
-        <td>
-          <% if touchpoint.user.present? %>
-            <a href="/users/<%= touchpoint.user.id %>">
-              <%= touchpoint.user.email %>
-            </a>
-          <% end %>
-        </td>
         <td>
           <% if touchpoint.contact.present? %>
             <a href="/contacts/<%= touchpoint.contact.id %>">
-              <%= touchpoint.contact.first_name %>
+              <%= touchpoint.contact.full_name %>
             </a>
           <% end %>
         </td>
@@ -204,6 +196,15 @@
             </a>
           <% end %>
         </td>
+        <td><%= touchpoint.date %></td>
+        <!-- <td><%= touchpoint.time %></td> -->
+        <!-- <td>
+          <% if touchpoint.user.present? %>
+            <a href="/users/<%= touchpoint.user.id %>">
+              <%= touchpoint.user.email %>
+            </a>
+          <% end %>
+        </td> -->
         <td><%= touchpoint.description %></td>
         <td><%= touchpoint.location %></td>
         <td><%= touchpoint.notes %></td>
@@ -213,6 +214,7 @@
           <a href="/delete_touchpoint/<%= touchpoint.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
       </tr>
+      <% end %>
       <% end %>
     </table>
     <%= paginate @touchpoints, theme: 'twitter-bootstrap-4' %>

@@ -4,5 +4,6 @@ class Milestone < ApplicationRecord
   # Indirect associations
 
   # Validations
+  # These arent necessarily required for the functionality of this program
 
 end

@@ -1,0 +1,19 @@
+name,industry,size,process_type,league
+Goldman Sach,Investment Banking,">30,000",Medium Touch,Bulge Bracket
+JP Morgan,Investment Banking,">200,000",High Touch,Bulge Bracket
+Citibank,Investment Banking,">200,000",Medium Touch,Bulge Bracket
+Credit Suisse,Investment Banking,">40,000",Medium Touch,Bulge Bracket
+Duetche Bank,Investment Banking,">100,000",Medium Touch,Bulge Bracket
+Evercore,Investment Banking,">1,000",Low Touch,Boutique
+Greenhill,Investment Banking,~350,Low Touch,Boutique
+Lincoln International,Investment Banking,>400,Medium Touch,Middle Market
+William Blair,Investment Banking,">1,400",UNK,Middle Market
+R.W. Baird,Investment Banking,">3,000",UNK,Middle Market
+BMO Capital Markets,Investment Banking,">45,000",UNK,Middle Market
+Barclays,Investment Banking,">120,000",Medium Touch,Bulge Bracket
+Bank of America Merrill Lynch,Investment Banking,">250,000",High Touch,Bulge Bracket
+Perella Weinberg,Investment Banking,~450,Medium Touch,Boutique
+Moellis and Co,Investment Banking,~650,UNK,Boutique
+Wells Fargo,Investment Banking,">250,000",Medium Touch,Bulge Bracket
+Macquarie,Investment Banking,">14,000",UNK,Middle Market
+Peter J Solomon,Investment Banking,~150,Low Touch,Boutique

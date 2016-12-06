@@ -17,5 +17,8 @@ class Firm < ApplicationRecord
   # Indirect associations
 
   # Validations
+  # Only firm name seems to be both necessary and necessarily unique
+  validates :name, :presence => true, :uniqueness => true
+
 
 end

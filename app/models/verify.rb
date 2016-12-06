@@ -8,5 +8,7 @@ class Verify < ApplicationRecord
   # Indirect associations
 
   # Validations
+  validates :user_id, :presence => true
+  validates :recruiting_event_id, :presence => true
 
 end

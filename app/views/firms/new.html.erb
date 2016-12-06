@@ -27,14 +27,23 @@
         <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @firm.name %>">
       </div>
 
+
       <!-- Label and input for industry -->
       <div class="form-group">
         <label for="industry" class="control-label">
           Industry
         </label>
-
-        <input type="text" id="industry" name="industry" placeholder="Industry" class="form-control" value="<%= @firm.industry %>">
+        <%= select_tag(:industry, options_from_collection_for_select(Industry.all, :name, :name, @firm.industry), :class => "form-control") %>
       </div>
+
+      <!-- Label and input for league -->
+      <div class="form-group">
+        <label for="industry" class="control-label">
+          League
+        </label>
+        <%= select_tag(:league, options_from_collection_for_select(League.all, :league, :league, @firm.league), :class => "form-control") %>
+      </div>
+
 
       <!-- Label and input for size -->
       <div class="form-group">
@@ -51,7 +60,7 @@
           Process type
         </label>
 
-        <input type="text" id="process_type" name="process_type" placeholder="Process type" class="form-control" value="<%= @firm.process_type %>">
+        <%= select_tag(:process_type, options_from_collection_for_select(ProcessType.all, :process_type, :process_type, @firm.process_type), :class => "form-control") %>
       </div>
 
       <button class="btn btn-success">

@@ -1,0 +1,2 @@
+class XyGraphShell < ApplicationRecord
+end

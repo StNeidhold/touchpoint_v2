@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root :to => "groups#index"
+  root :to => "touchpoints#index"
+
+  #Routes for dashboard
+  get "/dashboard", :controller => "dashboard", :action => "main"
+
+  #Routes for landing
+  get "/landing", :controller => "landing", :action => "main"
+
+
   # Routes for the Milestone resource:
   # CREATE
   get "/milestones/new", :controller => "milestones", :action => "new"
