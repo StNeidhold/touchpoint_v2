@@ -16,6 +16,12 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
 
+    @tracer = 0
+    referer = URI(request.referer).path
+    if referer == "/touchpoints/new"
+      @tracer = 1
+    end
+
     render("contacts/new.html.erb")
   end
 
@@ -33,20 +39,29 @@ class ContactsController < ApplicationController
     @contact.business_card = params[:business_card]
     @contact.email = params[:email]
     @contact.phone_number = params[:phone_number]
+    @contact.user_id = params[:user_id]
 
     save_status = @contact.save
 
     if save_status == true
       referer = URI(request.referer).path
 
-      case referer
-      when "/contacts/new", "/create_contact"
-        redirect_to("/contacts")
+      if @tracer = 1
+        redirect_to("/touchpoints/new")
       else
-        redirect_back(:fallback_location => "/", :notice => "Contact created successfully.")
+
+        case referer
+        when "/contacts/new", "/create_contact"
+          redirect_to("/contacts")
+        else
+          redirect_back(:fallback_location => "/", :notice => "Contact created successfully.")
+        end
+
       end
+
     else
       render("contacts/new.html.erb")
+
     end
   end
 
@@ -70,6 +85,8 @@ class ContactsController < ApplicationController
     @contact.business_card = params[:business_card]
     @contact.email = params[:email]
     @contact.phone_number = params[:phone_number]
+    @contact.user_id = params[:user_id]
+
 
     save_status = @contact.save
 

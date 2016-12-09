@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>TouchpointV2</title>
+  <title>Touchpoints</title>
 
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+
   <style>
     /* Only necessary if you are using navbar-fixed-top */
     body {
-      padding-top: 60px;
-    }
+          padding-top: 60px;
+          /*font-family: 'Roboto Condensed', sans-serif;*/
+          font-family: 'Monda', sans-serif;
+
+          }
 
     .navbar-brand {
-      padding: 0px;
-      }
+                  padding: 0px;
+                  }
     .navbar-brand>img {
-      height: 100%;
-      padding: 3px;
-      width: auto;
-      }
+                      height: 100%;
+                      padding: 3px;
+                      width: auto;
+                      }
+
+    #dropbutton    {
+                    padding: 5px;
+                    }
+
+    #navdrop {
+              padding: 8px;
+              }
 
   </style>
 
@@ -33,9 +46,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
 </head>
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="main_navbar">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -46,28 +60,132 @@
           <span class="icon-bar"></span>
         </button>
         <a href="/" class="navbar-brand" href="/dashboard">
-          <img class="img-fluid" alt="Responsive image" src="assets/touchpoint_logo2.png">
+          <img class="img-fluid" alt="Responsive image" src="http://localhost:3000/assets/touchpoint_logo2.png">
         </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+<!-- Touchpoints dropdown -->
+            <li>
+              <div class="dropdown" id="navdrop">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Touchpoints
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropbutton">
+                  <li>
+                    <a href="/touchpoints">
+                      <i class="fa fa-bars" aria-hidden="true"></i>
+                      View All
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/touchpoints/new">
+                      <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                      Add New
+                    </a>
+                  </li>
+                  <!-- <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li> -->
+                </ul>
+              </div>
+            </li>
+<!-- Contacts Dropdown -->
+            <li>
+              <div class="dropdown" id="navdrop">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Contacts
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropbutton">
+                  <li>
+                    <a href="/contacts">
+                      <i class="fa fa-bars" aria-hidden="true"></i>
+                      View All
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/contacts/new">
+                      <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                      Add New
+                    </a>
+                  </li>
+                  <!-- <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li> -->
+                </ul>
+              </div>
+            </li>
+<!-- Target Firms Dropdown -->
+            <li>
+              <div class="dropdown" id="navdrop">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Target Firms
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropbutton">
+                  <li>
+                    <a href="/target_firms">
+                      <i class="fa fa-bars" aria-hidden="true"></i>
+                      View All
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/target_firms/new">
+                      <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                      Add New
+                    </a>
+                  </li>
+                  <!-- <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li> -->
+                </ul>
+              </div>
+            </li>
+<!-- Recruiting Events Dropdown -->
+            <li>
+              <div class="dropdown" id="navdrop">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Recruiting Events
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropbutton">
+                  <li>
+                    <a href="/recruiting_events">
+                      <i class="fa fa-bars" aria-hidden="true"></i>
+                      View All
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/recruiting_events/new">
+                      <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                      Add New
+                    </a>
+                  </li>
+                  <!-- <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li> -->
+                </ul>
+              </div>
+            </li>
+
+            <!-- Old Navbar Items -->
           <!-- <li><a href="/milestones">Milestones</a></li>
-          <li><a href="/verifies">Verifies</a></li> -->
+          <li><a href="/verifies">Verifies</a></li>
           <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="/target_firms">Target Firms</a></li>
           <li><a href="/touchpoints">Touchpoints</a></li>
           <li><a href="/recruiting_events">Recruiting Events</a></li>
           <li><a href="/firms">Firms</a></li>
           <li><a href="/contacts">Contacts</a></li>
-          <!-- <li><a href="/follow_ups">Follow Ups</a></li> -->
+          <li><a href="/follow_ups">Follow Ups</a></li>
           <li><a href="/users">Users</a></li>
-          <!-- <li><a href="/group_members">Group Members</a></li> -->
+          <li><a href="/group_members">Group Members</a></li>
           <li><a href="/groups">Groups</a></li>
-          <!-- <li><a href="/rails/info">Sitemap</a></li> -->
-        </ul>
+          <li><a href="/rails/info">Sitemap</a></li> -->
 
+<!-- END OF NAVBAR CHOICES -->
+      </ul>
+
+<!-- NAVBAR User Sign/in/out/up -->
         <ul class="nav navbar-nav navbar-right">
           <% if current_user.present? %>
             <li>
@@ -116,5 +234,7 @@
 
     <%= yield %>
   </div>
+
+
 </body>
 </html>

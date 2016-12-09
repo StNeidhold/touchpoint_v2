@@ -17,41 +17,28 @@
     <form action="/create_recruiting_event" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      <input name="user_id" type="hidden" value="<%= current_user.id %>">
 
-      <!-- Label and input for name -->
-      <div class="form-group">
-        <label for="name" class="control-label">
-          Name
-        </label>
-
-        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @recruiting_event.name %>">
-      </div>
-
-      <!-- Label and input for location -->
-      <div class="form-group">
-        <label for="location" class="control-label">
-          Location
-        </label>
-
-        <input type="text" id="location" name="location" placeholder="Location" class="form-control" value="<%= @recruiting_event.location %>">
-      </div>
-
-      <!-- Label and input for address -->
-      <div class="form-group">
-        <label for="address" class="control-label">
-          Address
-        </label>
-
-        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @recruiting_event.address %>">
-      </div>
 
       <!-- Label and input for date -->
       <div class="form-group">
         <label for="date" class="control-label">
           Date
         </label>
+      <div class='input-group date' id='datetimepicker1'>
+        <input type='text' class="form-control" name="date" id="date">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
 
-        <input type="text" id="date" name="date" placeholder="Date" class="form-control" value="<%= @recruiting_event.date %>">
+      <script type="text/javascript">
+        $(function () {
+          $('#datetimepicker1').datetimepicker({
+            format: 'YYYY-MM-DD'
+          });
+        });
+      </script>
       </div>
 
       <!-- Label and input for start_time -->
@@ -59,7 +46,6 @@
         <label for="start_time" class="control-label">
           Start time
         </label>
-
         <input type="text" id="start_time" name="start_time" placeholder="Start time" class="form-control" value="<%= @recruiting_event.start_time %>">
       </div>
 
@@ -68,8 +54,39 @@
         <label for="end_time" class="control-label">
           End time
         </label>
-
         <input type="text" id="end_time" name="end_time" placeholder="End time" class="form-control" value="<%= @recruiting_event.end_time %>">
+      </div>
+
+      <!-- Label and input for name -->
+      <div class="form-group">
+        <label for="name" class="control-label">
+          Event Name
+        </label>
+        <input type="text" id="name" name="name" placeholder="Event Name" class="form-control" value="<%= @recruiting_event.name %>">
+      </div>
+
+      <!-- Label and input for firm_id -->
+      <div class="form-group">
+        <label for="firm_id" class="control-label">
+          Firm
+        </label>
+        <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name, @recruiting_event.firm_id), :class => "form-control") %>
+      </div>
+
+      <!-- Label and input for location -->
+      <div class="form-group">
+        <label for="location" class="control-label">
+          Location
+        </label>
+        <input type="text" id="location" name="location" placeholder="Location" class="form-control" value="<%= @recruiting_event.location %>">
+      </div>
+
+      <!-- Label and input for address -->
+      <div class="form-group">
+        <label for="address" class="control-label">
+          Address
+        </label>
+        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @recruiting_event.address %>">
       </div>
 
       <!-- Label and input for closed -->
@@ -78,15 +95,6 @@
           <input type="checkbox" id="closed" name="closed" value="1" <%= "checked" if @recruiting_event.closed %>>
           Closed
         </label>
-      </div>
-
-      <!-- Label and input for firm_id -->
-      <div class="form-group">
-        <label for="firm_id" class="control-label">
-          Firm
-        </label>
-
-        <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name, @recruiting_event.firm_id), :class => "form-control") %>
       </div>
 
       <button class="btn btn-success">

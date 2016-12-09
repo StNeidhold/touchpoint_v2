@@ -171,6 +171,7 @@
         <th>Contact</th>
         <th>Firm</th>
         <th>Date</th>
+        <th>Setting</th>
         <!-- <th>Time</th> -->
         <!-- <th>User</th> -->
         <th>Description</th>
@@ -196,7 +197,7 @@
             </a>
           <% end %>
         </td>
-        <td><%= touchpoint.date %></td>
+        <td><%= touchpoint.date.strftime("%m/%d/%y") %></td>
         <!-- <td><%= touchpoint.time %></td> -->
         <!-- <td>
           <% if touchpoint.user.present? %>
@@ -205,6 +206,7 @@
             </a>
           <% end %>
         </td> -->
+        <td><%= touchpoint.setting.setting %>
         <td><%= touchpoint.description %></td>
         <td><%= touchpoint.location %></td>
         <td><%= touchpoint.notes %></td>

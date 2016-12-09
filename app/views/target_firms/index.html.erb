@@ -5,13 +5,27 @@
   </h1>
 </div>
 
+<style>
+
+#diff_good{
+  color: green;
+}
+
+#diff_bad{
+  color: red;
+}
+
+</style>
+
 <div class="row">
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-        <th>User</th>
         <th>Firm</th>
+        <th> Name</th>
+        <th>Touchpoints to Date</th>
         <th>Touch goal</th>
+        <th>Diff</th>
         <th>Actions</th>
       </tr>
 
@@ -21,11 +35,7 @@
 
       <tr>
         <td>
-          <% if target_firm.user.present? %>
-            <a href="/users/<%= target_firm.user.id %>">
-              <%= target_firm.user.username %>
-            </a>
-          <% end %>
+          <img class="img-responsive" alt="Responsive Image" src="http://localhost:3000/assets/<%=target_firm.firm.name%>_logo" width="120">
         </td>
         <td>
           <% if target_firm.firm.present? %>
@@ -34,7 +44,20 @@
             </a>
           <% end %>
         </td>
+        <td>
+          <% @hits = Touchpoint.where({:user_id => current_user.id, :firm_id => target_firm.firm_id}).count%>
+          <%= @hits %>
+        </td>
         <td><%= target_firm.touch_goal %></td>
+        <% diff = @hits - target_firm.touch_goal.to_i%>
+        <% if diff >= 0 %>
+        <td id="diff_good">
+          <strong>+<%=diff%></strong>
+          <% else %>
+          <td id="diff_bad">
+            <strong><%=diff%></strong>
+            <% end %>
+          </td>
         <td>
           <a href="/target_firms/<%= target_firm.id %>" class="btn btn-primary">Show</a>
           <a href="/target_firms/<%= target_firm.id %>/edit" class="btn btn-warning">Edit</a>

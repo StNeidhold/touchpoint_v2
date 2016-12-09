@@ -6,6 +6,8 @@ class RecruitingEvent < ApplicationRecord
 
   belongs_to :firm
 
+  belongs_to :setting
+
   # Indirect associations
 
   # Validations
@@ -16,6 +18,10 @@ class RecruitingEvent < ApplicationRecord
   validates :start_time, :presence => true
   validates :end_time, :presence => true
   validates :firm_id, :presence => true
+
+  def date_and_time
+   "#{date.strftime("%m/%e")} #{time.strftime("%I%p")}"
+ end
 
 
 end

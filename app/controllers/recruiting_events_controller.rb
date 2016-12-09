@@ -27,9 +27,12 @@ class RecruitingEventsController < ApplicationController
     @recruiting_event.address = params[:address]
     @recruiting_event.date = params[:date]
     @recruiting_event.start_time = params[:start_time]
+    @recruiting_event.setting_id = params[:setting_id]
     @recruiting_event.end_time = params[:end_time]
     @recruiting_event.closed = params[:closed]
     @recruiting_event.firm_id = params[:firm_id]
+    @recruiting_event.user_id = params[:user_id]
+
 
     save_status = @recruiting_event.save
 
@@ -62,9 +65,10 @@ class RecruitingEventsController < ApplicationController
     @recruiting_event.date = params[:date]
     @recruiting_event.start_time = params[:start_time]
     @recruiting_event.end_time = params[:end_time]
+    @recruiting_event.setting_id = params[:setting_id]
     @recruiting_event.closed = params[:closed]
     @recruiting_event.firm_id = params[:firm_id]
-
+    @recruiting_event.user_id = params[:user_id]
     save_status = @recruiting_event.save
 
     if save_status == true

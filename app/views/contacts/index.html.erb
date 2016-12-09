@@ -173,7 +173,8 @@
         <th>Actions</th>
       </tr>
 
-      <% @contacts.each do |contact| %>
+      <% @contact = Contact.where({:user_id => current_user.id}) %>
+      <% @contact.each do |contact| %>
 
       <tr>
         <td>

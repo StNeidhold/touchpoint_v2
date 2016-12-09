@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Edit Recruiting Event #<%= @recruiting_event.id %></h3>
+  <h3>Edit <%= @recruiting_event.name %> with <%= @recruiting_event.firm.name %> on <%= @recruiting_event.date.strftime("%m/%e")%></h3>
 </div>
 
 <div class="row">
@@ -17,33 +17,8 @@
     <form action="/update_recruiting_event/<%= @recruiting_event.id %>" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      <input name="user_id" type="hidden" value="<%= current_user.id %>">
 
-      <!-- Label and input for name -->
-      <div class="form-group">
-        <label for="name" class="control-label">
-          Name
-        </label>
-
-        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @recruiting_event.name %>">
-      </div>
-
-      <!-- Label and input for location -->
-      <div class="form-group">
-        <label for="location" class="control-label">
-          Location
-        </label>
-
-        <input type="text" id="location" name="location" placeholder="Location" class="form-control" value="<%= @recruiting_event.location %>">
-      </div>
-
-      <!-- Label and input for address -->
-      <div class="form-group">
-        <label for="address" class="control-label">
-          Address
-        </label>
-
-        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @recruiting_event.address %>">
-      </div>
 
       <!-- Label and input for date -->
       <div class="form-group">
@@ -61,10 +36,49 @@
         $(function () {
           $('#datetimepicker1').datetimepicker({
             format: 'YYYY-MM-DD',
-            defaultDate: "<%= @recruiting_event.time.strftime("%m/%d/%y") %>"
+            defaultDate: "<%= @recruiting_event.date.strftime("%m/%d/%y") %>"
           });
         });
       </script>
+      </div>
+
+      <!-- Label and input for firm_id -->
+      <div class="form-group">
+        <label for="firm_id" class="control-label">
+          Firm
+        </label>
+        <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name, @recruiting_event.firm_id), :class => "form-control") %>
+      </div>
+
+      <!-- Label and input for name -->
+      <div class="form-group">
+        <label for="name" class="control-label">
+          Name
+        </label>
+        <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @recruiting_event.name %>">
+      </div>
+
+      <!-- Label and input for setting -->
+      <div class="form-group">
+        <label for="setting" class="control-label">
+          Setting
+        </label>
+        <%= select_tag(:setting_id, options_from_collection_for_select(Setting.all, :id, :setting, @recruiting_event.setting_id), :class => "form-control") %>
+
+      <!-- Label and input for location -->
+      <div class="form-group">
+        <label for="location" class="control-label">
+          Location
+        </label>
+        <input type="text" id="location" name="location" placeholder="Location" class="form-control" value="<%= @recruiting_event.location %>">
+      </div>
+
+      <!-- Label and input for address -->
+      <div class="form-group">
+        <label for="address" class="control-label">
+          Address
+        </label>
+        <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @recruiting_event.address %>">
       </div>
 
       <!-- Label and input for start_time -->
@@ -72,8 +86,7 @@
         <label for="start_time" class="control-label">
           Start time
         </label>
-
-        <input type="text" id="start_time" name="start_time" placeholder="Start time" class="form-control" value="<%= @recruiting_event.start_time %>">
+        <input type="text" id="start_time" name="start_time" placeholder="Start time" class="form-control" value="<%= @recruiting_event.start_time.strftime("%k:%M") %>">
       </div>
 
       <!-- Label and input for end_time -->
@@ -81,8 +94,7 @@
         <label for="end_time" class="control-label">
           End time
         </label>
-
-        <input type="text" id="end_time" name="end_time" placeholder="End time" class="form-control" value="<%= @recruiting_event.end_time %>">
+        <input type="text" id="end_time" name="end_time" placeholder="End time" class="form-control" value="<%= @recruiting_event.end_time.strftime("%k:%M") %>">
       </div>
 
       <!-- Label and input for closed -->
@@ -91,15 +103,6 @@
           <input type="checkbox" id="closed" name="closed" value="1" <%= "checked" if @recruiting_event.closed %>>
           Closed
         </label>
-      </div>
-
-      <!-- Label and input for firm_id -->
-      <div class="form-group">
-        <label for="firm_id" class="control-label">
-          Firm
-        </label>
-
-        <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name, @recruiting_event.firm_id), :class => "form-control") %>
       </div>
 
       <button class="btn btn-warning">

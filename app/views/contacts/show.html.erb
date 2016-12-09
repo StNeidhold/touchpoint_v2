@@ -1,51 +1,78 @@
 <div class="page-header">
-  <h3>Contact #<%= @contact.id %></h3>
+  <h3>Contact Details</h3>
 </div>
 
 <div class="row">
-  <div class="col-md-12 mb-2">
+  <div class="col col-md-6">
+
+<div class="media">
+  <div class="media-left media-top">
+    <a href="#">
+      <img class="media-object" src="http://localhost:3000/assets/silhouette_generic.jpg" width="200" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <!-- <h4 class="media-heading">Media heading</h4> -->
     <dl class="dl-horizontal">
-      <dt>First name</dt>
-      <dd><%= @contact.first_name %></dd>
-
-      <dt>Last name</dt>
-      <dd><%= @contact.last_name %></dd>
-
+      <dt>Name</dt>
+      <dd><%= @contact.full_name %></dd>
       <dt>Firm</dt>
       <dd>
-        <%= @contact.firm.name %>
-        <!-- <% if @contact.firm.present? %>
-          <a href="/firms/<%= @contact.firm_id %>">
-            <%= @contact.firm.name %>
-          </a>
-        <% end %> -->
+      <a href="/firms/<%=@contact.firm_id%>"><%= @contact.firm.name %></a>
       </dd>
-
-      <dt>Group</dt>
-      <dd><%= @contact.group %></dd>
-
-      <dt>Division</dt>
-      <dd><%= @contact.division %></dd>
-
       <dt>Title</dt>
       <dd><%= @contact.title %></dd>
-
+      <dt>Division</dt>
+      <dd><%= @contact.division %></dd>
+      <dt>Group</dt>
+      <dd><%= @contact.group %></dd>
       <!-- <dt>Photo</dt>
       <dd><%= @contact.photo %></dd>
-
       <dt>Business card</dt>
       <dd><%= @contact.business_card %></dd> -->
-
       <dt>B-School</dt>
       <dd><%= @contact.alma_mater %></dd>
-
       <dt>Email</dt>
       <dd><%= @contact.email %></dd>
-
       <dt>Phone number</dt>
       <dd><%= @contact.phone_number %></dd>
-
     </dl>
+  </div>
+</div>
+
+</div>
+<div class="col col-md-6">
+
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+
+    <!-- List group -->
+    <% @touchpoints = Touchpoint.where({:user_id => current_user.id}) %>
+    <% @touchpoints.each do |touchpoint| %>
+    <% if touchpoint.contact_id == @contact.id %>
+    <ul class="list-group">
+      <a href="/touchpoints/<%=touchpoint.id%>">
+        <dd><strong><%=touchpoint.date.strftime("%D")%> @ <%=touchpoint.setting.setting%></strong></dd>
+      </a>
+      <dd><strong>- Date:</strong> <%=touchpoint.date.strftime("%D")%></dd>
+      <dd><strong>- Location:</strong> <%=touchpoint.location%></dd>
+      <dd><strong>- Setting:</strong><%=touchpoint.setting.setting%> </dd>
+    </ul>
+    <% end %>
+    <% end %>
+  </div>
+
+
+</div>
+</div>
+
+
+
+<div class="row">
+  <!-- <div class="col col-md-offset-2 col-md-4">
+    <img src="silhouette_generic.jpg">
+  </div> -->
+
 
     <div class="btn-group btn-group-justified">
       <a href="/contacts" class="btn btn-primary">
@@ -59,143 +86,3 @@
       </a>
     </div>
   </div>
-</div>
-
-<!-- A Contact has many touchpoints -->
-
-<div class="row">
-  <div class="col-md-12">
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-info">
-        Touchpoints
-      </li>
-
-      <% @contact.touchpoints.each do |touchpoint| %>
-        <li class="list-group-item">
-          <a href="/touchpoints/<%= touchpoint.id %>">
-            <%= touchpoint.date %>
-          </a>
-          <div class="btn-group btn-group-xs pull-right">
-            <a href="/touchpoints/<%= touchpoint.id %>" class="btn btn-primary">
-              <i class="fa fa-search-plus"></i>
-            </a>
-            <a href="/touchpoints/<%= touchpoint.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <a href="/delete_touchpoint/<%= touchpoint.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
-          </div>
-        </li>
-      <% end %>
-
-      <li class="list-group-item">
-        <form action="/create_touchpoint" method="post">
-      <!-- Hidden input for authenticity token to protect from forgery -->
-      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
-
-      <!-- Label and input for date -->
-      <div class="form-group">
-        <label for="date" class="control-label">
-          Date
-        </label>
-
-        <input type="text" id="date" name="date" placeholder="Date" class="form-control" value="">
-      </div>
-
-      <!-- Label and input for time -->
-      <div class="form-group">
-        <label for="time" class="control-label">
-          Time
-        </label>
-
-        <input type="text" id="time" name="time" placeholder="Time" class="form-control" value="">
-      </div>
-
-      <!-- Label and input for user_id -->
-      <div class="form-group">
-        <label for="user_id" class="control-label">
-          User
-        </label>
-
-        <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :email), :class => "form-control") %>
-      </div>
-
-      <!-- Label and input for contact_id -->
-      <input type="hidden" name="contact_id" value="<%= @contact.id %>">
-
-      <!-- Label and input for firm_id -->
-      <div class="form-group">
-        <label for="firm_id" class="control-label">
-          Firm
-        </label>
-
-        <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name), :class => "form-control") %>
-      </div>
-
-      <!-- Label and input for description -->
-      <div class="form-group">
-        <label for="description" class="control-label">
-          Description
-        </label>
-
-        <input type="text" id="description" name="description" placeholder="Description" class="form-control" value="">
-      </div>
-
-      <!-- Label and input for location -->
-      <div class="form-group">
-        <label for="location" class="control-label">
-          Location
-        </label>
-
-        <input type="text" id="location" name="location" placeholder="Location" class="form-control" value="">
-      </div>
-
-      <!-- Label and input for notes -->
-      <div class="form-group">
-        <label for="notes" class="control-label">
-          Notes
-        </label>
-
-        <input type="text" id="notes" name="notes" placeholder="Notes" class="form-control" value="">
-      </div>
-
-      <button class="btn btn-block btn-success">
-        Create Touchpoint
-      </button>
-    </form>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<!-- A Contact has many users -->
-
-<div class="row">
-  <div class="col-md-12">
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-info">
-        Users
-      </li>
-
-      <% @contact.users.each do |user| %>
-        <li class="list-group-item">
-          <a href="/users/<%= user.id %>">
-            <%= user.email %>
-          </a>
-          <div class="btn-group btn-group-xs pull-right">
-            <a href="/users/<%= user.id %>" class="btn btn-primary">
-              <i class="fa fa-search-plus"></i>
-            </a>
-            <a href="/users/<%= user.id %>/edit" class="btn btn-warning">
-              <i class="fa fa-edit"></i>
-            </a>
-            <a href="/delete_user/<%= user.id %>" class="btn btn-danger" rel="nofollow">
-              <i class="fa fa-trash-o"></i>
-            </a>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>

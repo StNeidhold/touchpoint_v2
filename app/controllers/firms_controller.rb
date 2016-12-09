@@ -60,7 +60,7 @@ class FirmsController < ApplicationController
     @firm.industry = params[:industry]
     @firm.league = params[:league]
     @firm.size = params[:size]
-    @firm.process_type = params[:process_type]
+    @firm.process_type_id = params[:process_type_id]
 
     save_status = @firm.save
 

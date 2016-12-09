@@ -8,6 +8,75 @@
   <% end %>
 <% end %>
 
+<style>
+
+.wrapper{
+text-align: center;
+}
+
+.button{
+  position: absolute;
+  top: 50%;
+}
+
+#modal_yes{
+  width: 250px;
+}
+
+#modal_no{
+  width: 250px;
+}
+
+
+</style>
+
+<body>
+<!-- <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a> -->
+<div class="modal fade" id="myModal" data-backdrop="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 align="center">Is this Touchpoint for a New Contact or an Existing Contact?</h4>
+      </div>
+      <div class="modal-body">
+        <div class="wrapper">
+        <a href="/contacts/new" id="mlink">
+          <button type="button" class="btn btn-success" id="modal_yes">
+            <strong>New Contact</strong>
+          </button>
+        </a>
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="modal_no">
+          <strong>Existing Contact</strong>
+        </button>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+        <p align="center"> We need to know who you met with, so if this is for an interaction with a new contact, you will be redirected to the 'New Contact' page first</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+
+<script type="text/javascript">
+document.getElementById('mlink').onclick = function (e) {
+  var pidselect = document.getElementById('pid')
+  this.href = "http://localhost:3000/contacts/new/"+ pidselect.options[pidselect.selectedIndex].innerHTML;
+}
+</script>
+
+<% if @flag == 0 %>
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#myModal').modal('show');
+    });
+</script>
+<% else %>
+<% @flag = 0 %>
+<% end %>
+
 <div class="page-header">
   <h3>Add Touchpoint</h3>
 </div>
@@ -67,12 +136,20 @@
         <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name, @touchpoint.firm_id), :class => "form-control") %>
       </div> -->
 
+      <!-- Label and input for setting_id -->
+      <div class="form-group">
+        <label for="setting_id" class="control-label">
+          Setting
+        </label>
+
+        <%= select_tag(:setting_id, options_from_collection_for_select(Setting.all, :id, :setting, @touchpoint.setting_id), :class => "form-control") %>
+      </div>
+
       <!-- Label and input for description -->
       <div class="form-group">
         <label for="description" class="control-label">
           Description
         </label>
-
         <input type="text" id="description" name="description" placeholder="Description" class="form-control" value="<%= @touchpoint.description %>">
       </div>
 

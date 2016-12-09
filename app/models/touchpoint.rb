@@ -7,6 +7,8 @@ class Touchpoint < ApplicationRecord
 
   belongs_to :user
 
+  belongs_to :setting
+
   # Indirect associations
   # has_many   :contacts,
   #            :through => :touchpoints,
@@ -18,6 +20,7 @@ class Touchpoint < ApplicationRecord
   validates :user_id, :presence => true
   validates :contact_id, :presence => true
   validates :firm_id, :presence => true
+  validates :setting_id, :presence => true
   validates :description, :presence => true
   validates :location, :presence => true
 

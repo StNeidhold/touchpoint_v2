@@ -1,4 +1,18 @@
 class TouchpointsController < ApplicationController
+
+  def dashboard
+    # @q = Group.ransack(params[:q])
+    # @groups = @q.result(:distinct => true).includes(:group_members, :users).page(params[:page]).per(10)
+
+    @milestones = Milestone.all
+    @contacts = Contact.all
+    @target_firms = TargetFirm.all
+    @recruiting_events = RecruitingEvent.all
+    @touchpoints = Touchpoint.all
+
+    render("/dashboard.html.erb")
+  end
+
   def index
     @q = Touchpoint.ransack(params[:q])
     @touchpoints = @q.result(:distinct => true).includes(:user, :contact, :firm).page(params[:page]).per(10)
@@ -15,6 +29,13 @@ class TouchpointsController < ApplicationController
   def new
     @touchpoint = Touchpoint.new
 
+    referer = URI(request.referer).path
+    if referer == "/contacts/new"
+      @flag = 1
+    else
+      @flag = 0
+    end
+
     render("touchpoints/new.html.erb")
   end
 
@@ -28,6 +49,7 @@ class TouchpointsController < ApplicationController
     # @touchpoint.firm_id = params[:firm_id]
     @touchpoint.firm_id = Contact.find_by(:id => @touchpoint.contact_id).firm_id
     @touchpoint.description = params[:description]
+    @touchpoint.setting_id = params[:setting_id]
     @touchpoint.location = params[:location]
     @touchpoint.notes = params[:notes]
 
@@ -61,6 +83,7 @@ class TouchpointsController < ApplicationController
     @touchpoint.user_id = params[:user_id]
     @touchpoint.contact_id = params[:contact_id]
     @touchpoint.firm_id = params[:firm_id]
+    @touchpoint.setting_id = params[:setting_id]
     @touchpoint.description = params[:description]
     @touchpoint.location = params[:location]
     @touchpoint.notes = params[:notes]

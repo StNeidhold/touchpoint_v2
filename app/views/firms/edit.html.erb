@@ -38,7 +38,7 @@
 
       <!-- Label and input for league -->
       <div class="form-group">
-        <label for="industry" class="control-label">
+        <label for="league" class="control-label">
           League
         </label>
         <%= select_tag(:league, options_from_collection_for_select(League.all, :league, :league, @firm.league), :class => "form-control") %>
@@ -56,11 +56,11 @@
 
       <!-- Label and input for process_type -->
       <div class="form-group">
-        <label for="process_type" class="control-label">
+        <label for="process_type_id" class="control-label">
           Process type
         </label>
 
-        <%= select_tag(:process_type, options_from_collection_for_select(ProcessType.all, :process_type, :process_type, @firm.process_type), :class => "form-control") %>
+        <%= select_tag(:process_type_id, options_from_collection_for_select(ProcessType.all, :id, :process_type, @firm.process_type_id), :class => "form-control") %>
       </div>
       <button class="btn btn-warning">
         Update Firm

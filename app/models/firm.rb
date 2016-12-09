@@ -1,6 +1,8 @@
 class Firm < ApplicationRecord
   # Direct associations
 
+  belongs_to :process_type
+
   has_many   :recruiting_events,
              :dependent => :destroy
 
@@ -19,6 +21,8 @@ class Firm < ApplicationRecord
   # Validations
   # Only firm name seems to be both necessary and necessarily unique
   validates :name, :presence => true, :uniqueness => true
+  validates :process_type_id, :presence => true
+  #validates :industry_id, :presence => true
 
 
 end

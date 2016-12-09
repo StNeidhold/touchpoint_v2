@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206140251) do
+ActiveRecord::Schema.define(version: 20161209210813) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -64,16 +64,17 @@ ActiveRecord::Schema.define(version: 20161206140251) do
     t.datetime "updated_at"
     t.boolean  "privacy"
     t.string   "alma_mater"
+    t.integer  "user_id"
   end
 
   create_table "firms", force: :cascade do |t|
     t.string   "name"
     t.string   "industry"
     t.string   "size"
-    t.string   "process_type"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "league"
+    t.integer  "process_type_id"
   end
 
   create_table "follow_ups", force: :cascade do |t|
@@ -146,6 +147,14 @@ ActiveRecord::Schema.define(version: 20161206140251) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "privacy"
+    t.integer  "setting_id"
+    t.integer  "user_id"
+  end
+
+  create_table "settings", force: :cascade do |t|
+    t.string   "setting"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "target_firms", force: :cascade do |t|
@@ -169,6 +178,7 @@ ActiveRecord::Schema.define(version: 20161206140251) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "privacy"
+    t.integer  "setting_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -206,6 +216,9 @@ ActiveRecord::Schema.define(version: 20161206140251) do
     t.string   "y"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date     "date"
+    t.time     "time"
+    t.string   "stringbox"
   end
 
 end

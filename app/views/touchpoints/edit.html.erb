@@ -26,7 +26,7 @@
           Date
         </label>
       <div class='input-group date' id='datetimepicker1'>
-        <input type='text' class="form-control" name="date" id="date">
+        <input type='text' class="form-control" name="date" id="date" value="<%=@touchpoint.date%>">
         <span class="input-group-addon">
           <span class="glyphicon glyphicon-calendar"></span>
         </span>
@@ -76,6 +76,15 @@
         </label>
 
         <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name, @touchpoint.firm_id), :class => "form-control") %>
+      </div>
+
+      <!-- Label and input for setting_id -->
+      <div class="form-group">
+        <label for="setting_id" class="control-label">
+          Setting
+        </label>
+
+        <%= select_tag(:setting_id, options_from_collection_for_select(Setting.all, :id, :setting, @touchpoint.setting_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for description -->

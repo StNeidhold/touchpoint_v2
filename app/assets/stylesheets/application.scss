@@ -4,3 +4,77 @@
 @import "font-awesome";
 @import "bootstrap-4-spacers";
 @import 'bootstrap-datetimepicker';
+
+// .modal
+// {
+//     opacity:0.5 !important;
+//     background: blue;
+// }
+
+.modal{
+padding: 200px;
+height: 100%;
+}
+
+.panel > .panel-heading {
+    /*background-image: none;
+    background-color: red;
+    color: white;*/
+    font-size: 20px;
+    font-weight: bold;
+    }
+
+th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > td {
+vertical-align: middle;
+}
+
+#recruiting_events_head {
+    color: white;
+}
+
+#touchpoints_head {
+    color: white;
+}
+
+#contacts_head {
+    color: white;
+}
+
+#target_firms_head {
+    color: white;
+}
+
+#events_head {
+    color: white;
+}
+
+#main_navbar {
+  // height: 30px;
+  // padding: 100px;
+  // color: blue;
+}
+//
+// #bs-example-navbar-collapse-1{
+// padding: 0px 0;}
+
+body{
+//   background-image: image-url('NY2.jpg');
+//   // background-image: image-url('NYC_streets1.jpg');
+// background-repeat: no-repeat;
+// background-size: 100%;
+font-family: 'Monda', sans-serif;
+}
+
+.nav{
+  font-family: 'Monda', sans-serif;
+}

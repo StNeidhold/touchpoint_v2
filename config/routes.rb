@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root :to => "touchpoints#index"
+  root :to => "touchpoints#dashboard"
+
+#ONLY FOR DESIGN TESTING
+get "/tester", :controller => :tester, :action => "main"
 
   #Routes for dashboard
-  get "/dashboard", :controller => "dashboard", :action => "main"
+  get "/dashboard", :controller => "touchpoints", :action => "dashboard"
 
   #Routes for landing
   get "/landing", :controller => "landing", :action => "main"

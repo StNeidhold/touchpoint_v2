@@ -10,29 +10,20 @@
     <table class="table table-striped table-hover">
       <tr>
         <th>Name</th>
+        <th>Firm</th>
+        <th>Date</th>
         <th>Location</th>
         <th>Address</th>
-        <th>Date</th>
         <th>Start time</th>
         <th>End time</th>
         <th>Closed</th>
-        <th>Firm</th>
         <th>Actions</th>
       </tr>
 
-      <% @recruiting_events.each do |recruiting_event| %>
+      <% @recruiting_event = RecruitingEvent.where({:user_id => current_user.id}) %>
+      <% @recruiting_event.each do |recruiting_event| %>
       <tr>
         <td><%= recruiting_event.name %></td>
-        <td><%= recruiting_event.location %></td>
-        <td><%= recruiting_event.address %></td>
-        <td><%= recruiting_event.date %></td>
-        <td><%= recruiting_event.start_time %></td>
-        <td><%= recruiting_event.end_time %></td>
-        <% if recruiting_event.closed = "true" %>
-        <td> Yes </td>
-        <% elsif recruiting_event.closed = "false"%>
-        <td> No </td>
-        <% end %>
         <td>
           <% if recruiting_event.firm.present? %>
             <a href="/firms/<%= recruiting_event.firm.id %>">
@@ -40,6 +31,17 @@
             </a>
           <% end %>
         </td>
+        <td><%= recruiting_event.date.strftime("%m/%d/%y") %></td>
+        <td><%= recruiting_event.location %></td>
+        <td><%= recruiting_event.address %></td>
+        <td><%= recruiting_event.start_time.strftime("%H:%M") %></td>
+        <td><%= recruiting_event.end_time.strftime("%H:%M") %></td>
+        <% if recruiting_event.closed = "true" %>
+        <td> Yes </td>
+        <% elsif recruiting_event.closed = "false"%>
+        <td> No </td>
+        <% end %>
+
         <td>
           <a href="/recruiting_events/<%= recruiting_event.id %>" class="btn btn-primary">Show</a>
           <a href="/recruiting_events/<%= recruiting_event.id %>/edit" class="btn btn-warning">Edit</a>
