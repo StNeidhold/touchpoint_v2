@@ -1,10 +1,47 @@
 Rails.application.routes.draw do
+  # Routes for the Firm_group resource:
+  # CREATE
+  get "/firm_groups/new", :controller => "firm_groups", :action => "new"
+  post "/create_firm_group", :controller => "firm_groups", :action => "create"
+
+  # READ
+  get "/firm_groups", :controller => "firm_groups", :action => "index"
+  get "/firm_groups/:id", :controller => "firm_groups", :action => "show"
+
+  # UPDATE
+  get "/firm_groups/:id/edit", :controller => "firm_groups", :action => "edit"
+  post "/update_firm_group/:id", :controller => "firm_groups", :action => "update"
+
+  # DELETE
+  get "/delete_firm_group/:id", :controller => "firm_groups", :action => "destroy"
+  #------------------------------
+
+  # Routes for the Ib_group resource:
+  # CREATE
+  get "/ib_groups/new", :controller => "ib_groups", :action => "new"
+  post "/create_ib_group", :controller => "ib_groups", :action => "create"
+
+  # READ
+  get "/ib_groups", :controller => "ib_groups", :action => "index"
+  get "/ib_groups/:id", :controller => "ib_groups", :action => "show"
+
+  # UPDATE
+  get "/ib_groups/:id/edit", :controller => "ib_groups", :action => "edit"
+  post "/update_ib_group/:id", :controller => "ib_groups", :action => "update"
+
+  # DELETE
+  get "/delete_ib_group/:id", :controller => "ib_groups", :action => "destroy"
+  #------------------------------
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root :to => "touchpoints#dashboard"
 
 #ONLY FOR DESIGN TESTING
 get "/tester", :controller => :tester, :action => "main"
+
+#for reload of page after firm seletion w/ params
+get "/tester/update", :controller => :tester, :action => "update"
 
   #Routes for dashboard
   get "/dashboard", :controller => "touchpoints", :action => "dashboard"

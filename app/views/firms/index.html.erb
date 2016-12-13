@@ -152,6 +152,8 @@
         <th>League</th>
         <th>Size</th>
         <th>Process type</th>
+        <th>Ticker</th>
+        <th>Exchange</th>
         <th>Actions</th>
       </tr>
 
@@ -163,12 +165,15 @@
         <td><%= firm.league %></td>
         <td><%= firm.size %></td>
         <td><%= firm.process_type.process_type %></td>
+        <td><%= firm.ticker %></td>
+        <td><%= firm.exchange %></td>
         <td>
           <a href="/firms/<%= firm.id %>" class="btn btn-primary">Show</a>
           <% if current_user.email == "admin@example.com" %>
           <a href="/firms/<%= firm.id %>/edit" class="btn btn-warning">Edit</a>
           <a href="/delete_firm/<%= firm.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
           <% end %>
+
         </td>
       </tr>
       <% end %>

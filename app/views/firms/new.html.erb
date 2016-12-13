@@ -63,6 +63,24 @@
         <%= select_tag(:process_type, options_from_collection_for_select(ProcessType.all, :process_type, :process_type, @firm.process_type), :class => "form-control") %>
       </div>
 
+      <!-- Label and input for ticker -->
+      <div class="form-group">
+        <label for="process_type_id" class="control-label">
+          Ticker
+        </label>
+
+        <input type="text" id="ticker" name="ticker" placeholder="Ticker" class="form-control">
+      </div>
+
+      <!-- Label and input for exchange -->
+      <div class="form-group">
+        <label for="process_type_id" class="control-label">
+          Exchange
+        </label>
+
+        <input type="text" id="exchange" name="exchange" placeholder="Exchange" class="form-control">
+      </div>
+
       <button class="btn btn-success">
         Create Firm
       </button>

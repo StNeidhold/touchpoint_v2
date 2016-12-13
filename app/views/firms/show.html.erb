@@ -1,6 +1,29 @@
-<div class="page-header">
-  <img src="http://localhost:3000/assets/<%=@firm.name%>_logo" width="200">
+
+<style>
+#change{
+  <% if @change.to_f > 0%>
+  color: green;
+  <% else %>
+  color: red;
+  <% end %>
+}
+#news1{
+  vertical-align: middle;
+}
+
+</style>
+
+<div class="row">
+  <div class="col col-md-offset-1 col-md-2">
+    <p align="right" id="stock"><strong>$<%=@price%></strong></p>
+    <p align="right" id="change"><%= @change%> (<%= @percen_change %>%)</p>
+    <p align="right" id="change">(<%= @percen_change %>%)</p>
+  </div>
+  <div class="col col-md-3">
+    <img src="http://localhost:3000/assets/<%=@firm.name%>_logo" width="200">
+  </div>
 </div>
+
 
 
 <div class="row">
@@ -21,9 +44,16 @@
       <dt>Process type</dt>
       <dd><%= @firm.process_type.process_type %></dd>
 
+      <dt>Stock Information</dt>
+      <dd><%= @firm.ticker %>:<%= @firm.exchange %></dd>
+
+      <dt>Stock Price</dt>
+      <dd>$<%= @price %> -- <%= @change %> (<%= @percen_change %>%)</dd>
+
     </dl>
     <!-- temporary hack for admin check -->
-<% if current_user.email == "admin@example.com" %>
+<!-- <% if current_user.email == "admin@example.com" %> -->
+
     <div class="btn-group btn-group-justified">
       <a href="/firms" class="btn btn-primary">
         Back
@@ -35,6 +65,50 @@
         Delete
       </a>
     </div>
-    <% end %>
+    <!-- <% end %> -->
   </div>
+</div>
+
+<div class="row">
+<div class="col col-md-6">
+  <div class="media">
+    <div class="media-left" id="news1">
+      <a href="<%= @nyt_url1 %>">
+        <img class="media-object" src="http://localhost:3000/assets/<%=@nyt_source1 %>_logo.png" width=200px>
+      </a>
+    </div>
+    <div class="media-body" id="news1">
+      <h4 class="media-heading">
+        <a href="<%= @nyt_url1 %>"><%= @nyt_title1 %></a>
+      </h4>
+      <p><%= @nyt_snippet1 %></p>
+    </div>
+  </div>
+  <div class="media">
+    <div class="media-left">
+      <a href="<%= @nyt_url2 %>">
+        <img class="media-object" src="http://localhost:3000/assets/<%=@nyt_source2 %>_logo.png" width=200px>
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <a href="<%= @nyt_url2 %>"><%= @nyt_title2 %></a>
+      </h4>
+      <p><%= @nyt_snippet2 %></p>
+    </div>
+  </div>
+  <div class="media">
+    <div class="media-left">
+      <a href="<%= @nyt_source3 %>">
+        <img class="media-object" src="http://localhost:3000/assets/<%=@nyt_source3 %>_logo.png" width=200px>
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <a href="<%= @nyt_url3 %>"><%= @nyt_title3 %></a>
+      </h4>
+      <p><%= @nyt_snippet3 %></p>
+    </div>
+  </div>
+</div>
 </div>

@@ -1,542 +1,252 @@
 <!DOCTYPE html>
 
-    <style>
+<style>
+/*.img-circular{
+ width: 50px;
+ height: 50px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+}*/
+#dash_head{
+  font-weight: 600;
+  text-align: center;
+  /*color: white;*/
+}
+#name_head{
+  font-weight: 300;
+  text-align: center;
+  /*color: white;*/
+}
+#content_pane{
+  vertical-align: middle;
+}
+</style>
 
-    #dash_head{
-      font-weight: 600;
-      text-align: center;
-      /*color: white;*/
-    }
-
-    /*panel{
-      height: 300px;
-      overflow: auto;
-    }*/
-
-    .panel {
-      height: 300px;
-      overflow: auto;
-        }
-
-      table {
-        font-size: 12.5px;
-      }
-
-      ul {
-        font-size: 18px;
-      }
-      #touch_by_target {
-        padding: 60px;
-      }
+<div class="header">
 
 
 
-      .tab-content > .tab-pane,
-      .pill-content > .pill-pane {
-          display: block;
-          height: 0;
-          overflow-y: hidden;
-      }
+</div>
 
-      .tab-content > .active,
-      .pill-content > .active {
-          height: auto;
-      }
 
-    </style>
-
-<!-- START PAGE DISPLAY -->
 <div class="container">
 
-<!-- START TOP ROW -->
-    <div class="row welcome">
-        <div class="welcome col-md-offset-1 col-md-10">
-          <h1 align="center">TEST PAGE ONLY</h1>
-          <h1 id="dash_head"> Welcome back <%=current_user.first_name.capitalize%>!<h1>
+  <form action="/tester/update" method="get">
 
-          </div>
-          <div class="col col-md-5">
-              <h1 align="center">Chart Your Progress</h1>
-                <ul class="nav nav-pills nav-justified" id="chart_tab">
-
-                  <li class="dropdown">
-                    <a class="drowpdown-toggle" data-toggle="dropdown" href="#">
-                    Touchpoints <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#t_by_firm" data-toggle="tab"> by Firm </a></li>
-                      <li><a href="#t_over_time" data-toggle="tab"> over Time </a></li>
-                      <!-- <li><a href="#t_by_firm"> Touchpoints over Time </a></li> -->
-                    </ul>
-                  </li>
-
-                <li><a data-toggle="pill" href="#menu1">Touchpoints over time</a></li>
-                <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
-                <li><a data-toggle="pill" href="#menu3">Menu 3</a></li>
-              </ul>
-
-              <div class="tab-content">
-
-                <div id="t_by_firm" class="tab-pane fade in active">
-                  <% @touchpoints = Touchpoint.where({ :user_id => current_user.id }) %>
-                    <% @touchpoints.each do |touchpoint| %>
-                      <% firm = XyGraphShell.new %>
-                      <% firm.x = touchpoint.firm.name %>
-                      <% firm.save %>
-                    <% end %>
-                    <% @pie_firms = XyGraphShell.all %>
-                  <%= pie_chart @pie_firms.group(:x).count, library: { title: {text: 'Touchpoints by Firm'}, backgroundColor: "transparent"} %>
-                  <% XyGraphShell.delete_all %>
-                </div>
-
-                <div id="t_over_time" class="tab-pane fade">
-                  <!-- Touchpoints over time graph -->
-                    <%  seventy2_date = 3.days.ago
-                        week_date = 7.days.ago
-                        month_date = 1.month.ago
-                        end_date = Date.today %>
-
-                        <%
-                        @last_72 = XyGraphShell.new
-                        @last_72.x = "Past 72hrs"
-                        @last_72.y = Touchpoint.where({ :user_id => current_user.id, :date => (seventy2_date..end_date) }).count
-                        @last_72.save
-
-                        @last_week = XyGraphShell.new
-                        @last_week.x = "Past Week"
-                        @last_week.y = Touchpoint.where({ :date => (week_date..end_date) }).count
-                        @last_week.save
-
-                        @last_month = XyGraphShell.new
-                        @last_month.x = "Past Month"
-                        @last_month.y = Touchpoint.where({ :date => (month_date..end_date) }).count
-                        @last_month.save
-                        %>
-
-                        <%= column_chart XyGraphShell.group(:x).sum(:y), min: 0, max: 8, library: { title: { text: "Touchpoints over Time"}} %>
-                        <% XyGraphShell.delete_all %>
-                </div>
-<!-- Touchpoints by type -->
-<%
-
-
-
-
-%>
-
-
-                <div id="menu1" class="tab-pane fade">
-                  <h3>Chart 2</h3>
-                  <%  @target_firm = TargetFirm.all %>
-                    <% @target_firm.each do |target_firm| %>
-                      <% if target_firm.user_id == current_user.id %>
-                              <% @new_point = XyGraphShell.new %>
-                              <% @new_point.x = target_firm.firm.name %>
-                              <% @new_point.y = Touchpoint.where({ :firm_id => target_firm.firm_id, :user_id => target_firm.user_id}).count %>
-                              <% @new_point.save %>
-                      <% end %>
-                    <% end %>
-                  <%= column_chart XyGraphShell.group(:x).sum(:y), min: 0, max: 5, library: { title: {text: 'Touchpoints at Target Firms'}} %>
-                  <% XyGraphShell.delete_all %>
-                </div>
-
-                <div id="menu2" class="tab-pane fade">
-                  <h3>Menu 2</h3>
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                </div>
-                <div id="menu3" class="tab-pane fade">
-                  <h3>Menu 3</h3>
-                  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-              </div>
-
-
-
-
-<!-- MODAL Code -->
-            <!-- Button to trigger modal -->
-            <!-- <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a> -->
-            <!-- Modal -->
-            <!-- <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">Modal header</h3>
-              </div>
-              <div class="modal-body">
-                <p>One fine body…</p>
-              </div>
-              <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                <button class="btn btn-primary">Save changes</button>
-              </div>
-            </div> -->
-
+    <% if @main_banner_flag == 0 %>
+    <div class="row">
+      <div class="firm_banner col-xs-12">
+        <div class="jumbotron">
+          <h1 id="dash_head" align="center">Master Firm Exploration Page</h1>
         </div>
+      </div>
+    </div>
+    <% end %>
+
+    <div class="row">
+      <div class="col col-md-12">
+        <!-- Label and input for firm_id -->
+        <div class="form-group">
+          <label for="firm_id" class="control-label">
+            Firm
+          </label>
+          <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name, @firm.id), :class => "form-control" ) %>
+          <button class="btn btn-success">
+            Refresh
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="row graph_row">
-<!-- List of Touchpoints by Firm -->
-      <div class="touchgraph col-md-offset-1 col-md-5">
-        <div class="panel panel-primary" id="touch_panel">
-          <div class="panel-heading" align="center">
-            <a href="/touchpoints" id="touchpoints_head">
-            My Touchpoints
-            </a>
-          </div>
-          <div class="panel-body">
-
-          <table class="table table-striped">
-              <tr>
-                <th>View</th>
-                <th>Firm</th>
-                <th>Contact Name</th>
-                <th>Touchpoint</th>
-                <th>Date</th>
-              </tr>
-              <% @touchpoints.each do |touchpoint| %>
-              <tr>
-                <% if touchpoint.user_id == current_user.id %>
-                <td>
-                  <a href="/touchpoints/<%=touchpoint.id%>">
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                </a>
-                </td>
-                <td>
-                  <a href="/firms/<%=touchpoint.contact.firm_id%>">
-                  <%=touchpoint.contact.firm.name%>
-                  </a>
-                </td>
-                <td>
-                  <a href="/contacts/<%=touchpoint.contact_id%>">
-                  <%=touchpoint.contact.full_name%>
-                </a>
-                </td>
-                <td><%=touchpoint.description%></td>
-                <td><%=touchpoint.date.strftime('%v')%></td>
-                <% end %>
-              </tr>
-              <% end %>
-          </table>
-          </div>
+    <!-- This shoudl include basic firms fact like headquarters, personnel, offices, stock price -->
+    <% if @main_banner_flag == 1 %>
+    <div class="row">
+      <div class="firm_banner col-xs-12">
+        <div class="jumbotron">
+          <h1 id="name_head" align="center"><%= @firm.name %></h1>
         </div>
-        <p align="center">
-          <a href="/touchpoints/new" class="btn btn-sm btn-success">New Touchpoint</a>
-        </p>
       </div>
+      <div class="col col-md-offset-3 col-md-3">
+        <dl class="dl-horizontal">
+          <dt>Headquarters</dt>
+          <dd>HQ Content</dd>
+          <dt>Employees</dt>
+          <dd><%= @firm.size %></dd>
+          <dt>League</dt>
+          <dd><%= @firm.league %></dd>
+        </dl>
+      </div>
+      <div class="col col-md-3">
+        <dl class="dl-horizontal">
+          <dt>Headquarters</dt>
+          <dd>HQ Content</dd>
+          <dt>Employees</dt>
+          <dd><%= @firm.size %></dd>
+          <dt>League</dt>
+          <dd><%= @firm.league %></dd>
+        </dl>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col col-md-3">
+        <h3 align="left">Groups</h3>
+      </div>
+    </div>
 
-<!-- Pie Graph of Touchpoints by Firm -->
-      <div class="touchgraph col-md-5">
-        <% @touchpoints = Touchpoint.where({ :user_id => current_user.id }) %>
-          <% @touchpoints.each do |touchpoint| %>
-            <% firm = XyGraphShell.new %>
-            <% firm.x = touchpoint.firm.name %>
-            <% firm.save %>
+    <div class="row">
+      <div class="org_chart col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <% @groups = FirmGroup.where({:firm_id => @firm.id}) %>
+          <% @groups.each do |group| %>
+          <li role="presentation"><a href="#<%= group.ib_group.name.gsub(" ","_").gsub(",","") %>" data-toggle="tab"><%= group.ib_group.name %></a></li>
           <% end %>
-          <% @pie_firms = XyGraphShell.all %>
-        <%= pie_chart @pie_firms.group(:x).count, library: { title: {text: 'Touchpoints by Firm'}, backgroundColor: 'transparent'} %>
-        <% XyGraphShell.delete_all %>
+        </ul>
       </div>
-
-    </div>
-<!-- FIRST ROW END -->
-
-<!-- START OF ROW 3 -->
-    <div class="touch_by_target row" id="touch_by_target">
-      <div class="col col-md-offset-1 col-md-10">
-
-        <!-- Touchpoints over time graph -->
-          <%  seventy2_date = 3.days.ago
-              week_date = 7.days.ago
-              month_date = 1.month.ago
-              end_date = Date.today %>
-
-              <%
-              @last_72 = XyGraphShell.new
-              @last_72.x = "Past 72hrs"
-              @last_72.y = Touchpoint.where({ :user_id => current_user.id, :date => (seventy2_date..end_date) }).count
-              @last_72.save
-
-              @last_week = XyGraphShell.new
-              @last_week.x = "Past Week"
-              @last_week.y = Touchpoint.where({ :date => (week_date..end_date) }).count
-              @last_week.save
-
-              @last_month = XyGraphShell.new
-              @last_month.x = "Past Month"
-              @last_month.y = Touchpoint.where({ :date => (month_date..end_date) }).count
-              @last_month.save
-              %>
-
-              <%= column_chart XyGraphShell.group(:x).sum(:y), min: 0, max: 8, library: { title: { text: "Touchpoints over Time"}} %>
-              <% XyGraphShell.delete_all %>
-
-
-      </div>
-    </div>
-<!-- END OF ROW -->
-
-<!-- SEOND ROW START -->
-    <div class="row graph_row_2">
-<!-- TARGET FIRM GRAPH -->
-      <div class="col col-md-offset-1 col-md-5">
-      <%  @target_firm = TargetFirm.all %>
-        <% @target_firm.each do |target_firm| %>
-          <% if target_firm.user_id == current_user.id %>
-                  <% @new_point = XyGraphShell.new %>
-                  <% @new_point.x = target_firm.firm.name %>
-                  <% @new_point.y = Touchpoint.where({ :firm_id => target_firm.firm_id, :user_id => target_firm.user_id}).count %>
-                  <% @new_point.save %>
+      <div class="col col-md-6">
+        <div class="tab-content" id="content_pane">
+          <% @groups.each do |group| %>
+          <div class="tab-pane fade" id="<%= group.ib_group.name.gsub(" ","_").gsub(",","") %>">
+            <%= group.ib_group.name %> Content
+          </div>
           <% end %>
-        <% end %>
-      <%= column_chart XyGraphShell.group(:x).sum(:y), min: 0, max: 5, library: { title: {text: 'Touchpoints at Target Firms'}} %>
-      <% XyGraphShell.delete_all %>
-      </div>
-
-<!-- DISPLAY OF USER TARGET FIRMS -->
-      <div class=" col col-md-5">
-        <div class="panel panel-primary">
-          <div class="panel-heading" align="center">
-              <a href="/target_firms" id="target_firms_head">
-                Target Firms
-              </a>
-            </div>
-          <div class="panel-body">
-          <div class="table-responsive">
-
-            <% if @target_firms.blank?%>
-            <!-- <h3 align="center">Focus YOUR Process</h3> -->
-            <h3 align="center">Add Some Target Firms </h3>
-            <% elsif %>
-
-          <table class="table table-striped">
-              <tr>
-                <th>Firm</th>
-                <th>Industry</th>
-                <th>Last Touchpoint</th>
-                <th>Upcoming Events</th>
-              </tr>
-              <% @target_firms.each do |target_firm| %>
-              <tr>
-                <% if target_firm.user.id == current_user.id%>
-                <td>
-                  <a href="/firms/<%=target_firm.firm_id%>">
-                  <%=target_firm.firm.name%>
-                  </a>
-                </td>
-                  <td>
-                    <%=target_firm.firm.industry%></td>
-                  </td>
-                <!-- Last Touchpoint -->
-                <td>
-                  <% @touch_search = Touchpoint.find_by( :firm_id => target_firm.firm_id, :user_id => current_user.id ) %>
-                  <% if @touch_search.blank? %>
-                  No touchpoints yet
-                  <% elsif %>
-                    <%= @touch_search.contact.full_name %>
-                    <!-- <% @touchpoints.each do |touchpoint| %>
-                      <% if touchpoint.firm_id == target_firm.id && touchpoint.user_id == current_user.id %>
-                      <%= touchpoint.contact.full_name %>
-                      <% end %>
-                      <%= Touchpoint.find_by( :firm_id => target_firm.firm_id, :user_id => current_user.id ).contact.full_name %>
-                    <% end %> -->
-                  <% end %>
-                </td>
-                <!-- Upcoming Events -->
-                <td>
-                <%=  Firm.find_by(:id => target_firm.firm_id).name %>
-                </td>
-                <% end %>
-                </tr>
-              <% end %>
-          </table>
-
-          <% end %>
-
-          </div>
-          </div>
         </div>
-        <p align="center">
-          <a href="/target_firms/new" class="btn btn-sm btn-success">Add Target firm</a>
-        </p>
       </div>
     </div>
-<!-- EMD OF ROW 2 -->
 
-
-
-    <div class="row row_two">
-        <!-- for recent activity -->
-        <div class="recent_activity col-md-offset-1 col-md-5">
-          <h2 align="center">Placeholder for recent activity<h2>
-        </div>
-        <!-- for alerts, to be defined later (should be a collection of contact goals,
-        upcoming events, upcoming milestones, ect...) -->
-        <div class="alerts col-md-5">
-          <h2 align="center">Placeholder for Alerts</h2>
-        </div>
-    </div>
-
-
-    <div class="row row_three">
-        <!-- to display all of the users touchpoints to date -->
-        <div class="touchpoints col-md-offset-2 col-md-8">
-
-
-
-        </div>
-    </div>
-
-    <div class="row row_four">
-
-<!-- for display of all contacts -->
-        <div class="contacts col-md-offset-0 col-md-4">
-          <div class="panel panel-primary">
-            <div class="panel-heading" align="center">
-              <a href="/contacts" id="contacts_head">
-                  Contacts
-              </a>
-            </div>
-            <div class="panel-body">
-
-            <div class="table-responsive">
-            <table class="table table-striped">
-                <tr>
-                  <th>Contact Name</th>
-                  <th>Firm</th>
-                  <th>Dept</th>
-                  <th>Group</th>
-                </tr>
-                <% @touchpoints.each do |touchpoint| %>
-                <tr>
-                  <% if touchpoint.user_id == current_user.id%>
-                  <td>
-                    <a href="/contacts/<%=touchpoint.contact_id%>">
-                    <%=touchpoint.contact.full_name%>
-                    </a>
-                  </td>
-                    <td>
-                      <a href="/firms/<%=touchpoint.contact.firm_id%>">
-                      <%=touchpoint.contact.firm.name%></td>
-                      </a>
-                    </td>
-                  <td><%=touchpoint.contact.group%></td>
-                  <td><%=touchpoint.contact.division%></td>
-                  <% end %>
-                </tr>
-                <% end %>
-            </table>
-            </div>
-            <p align="center">
-              <a href="/contacts/new" class="btn btn-sm btn-success">Add Contact</a>
-            </p>
-            </div>
-          </div>
-        </div>
-
-<!-- Panel for target firms -->
-        <div class="target_firms col-md-4">
-
-
-        </div>
-
-
-<!-- for RECRUITING EVENTS -->
-        <div class="target_firms col-md-4">
-          <div class="panel panel-primary">
-            <div class="panel-heading" align="center">
-              <a href="/recruiting_events" id="recruiting_events_head">Recruiting Events</a>
-            </div>
-            <div class="panel-body">
-            <div class="table-responsive">
-
-              <% if @recruiting_events.blank?%>
-              <!-- <h3 align="center">Focus YOUR Process</h3> -->
-              <h3 align="center">Add Some Recruiting Events </h3>
-              <% elsif %>
-
-            <table class="table table-striped">
-                <tr>
-                  <th>Firm</th>
-                  <th>Event</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Location</th>
-                </tr>
-                <% @recruiting_events.each do |recruiting_event| %>
-                <tr>
-                  <td>
-                    <a href="/firms/<%=recruiting_event.firm_id%>">
-                    <%=recruiting_event.firm.name%>
-                    </a>
-                  </td>
-                    <td>
-                      <a href="/recruiting_events/<%=recruiting_event.id%>">
-                      <%=recruiting_event.name%>
-                      </a>
-                    </td>
-                  <!-- Date -->
-                  <td>
-                    <%=recruiting_event.date%>
-                  </td>
-                  <!-- Time -->
-                  <td>
-                    <%=recruiting_event.start_time%>
-                  </td>
-                  <!-- Time -->
-                  <td>
-                    <%=recruiting_event.location%>
-                  </td>
-                  </tr>
-                <% end %>
-            </table>
-
-            <% end %>
-
-            </div>
-            </div>
-            <p align="center">
-              <a href="/target_firms/new" class="btn btn-sm btn-success">Add Target firm</a>
-            </p>
-          </div>
-        </div>
-
-    <div class="row footer">
-        <div class="bottom_navbar col-md-offset-1 col-md-5">
-          <h3 align="center">Target Firms Performance<h3>
-
-
-
-        </div>
-    </div>
+    <!-- ADD OFFICES MAP using that map chart thing -->
+    
+    <% end %>
+  </form>
+  <div class="footer">
+    Footer Content
   </div>
 </div>
 
 
-<!-- OLD GRAPHS -->
 
-<h3 align="center">Touchpoints Over Time<h3>
 
-<!-- Touchpoints in past week -->
-  <%  seventy2_date = 3.days.ago
-      week_date = 7.days.ago
-      month_date = 1.month.ago
-      end_date = Date.today
+  <!-- <div class="row">
+      <div class="org_chart col-md-6">
 
-      @last_72 = XyGraphShell.new
-      @last_72.x = "Past 72hrs"
-      @last_72.y = Touchpoint.where(:user_id => current_user.id, :date => (seventy2_date..end_date)).count
-      @last_72.save
+        <ul class="nav nav-tabs nav-justified">
+          <li role="presentation"><a href="#industrials" data-toggle="tab">Industrials</a></li>
+          <li role="presentation" class="active"><a href="#fig" data-toggle="tab">Fig</a></li>
+          <li role="presentation"><a href="#tech" data-toggle="tab">Tech</a></li>
+        </ul>
+        <div class="tab-content">
+        <div id="industrials" class="tab-pane fade">
+          <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" class="active"><a href="#pp" data-toggle="tab">Paper / Packaging</a></li>
+            <li role="presentation"><a href="#chem" data-toggle="tab">Chemicals</a></li>
+            <li role="presentation"><a href="#manu" data-toggle="tab">Manufacturing</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade" id="pp">
+              <% @touchpoints = Touchpoint.where({ :user_id => current_user.id }) %>
+              <% if Touchpoint.where({:user_id => current_user.id}).count == 0 %>
+              <div class="well well-lg" id="no_touch">
+              <strong>No Touchpoints Yet!</strong>
+            </div>
+              <%else%>
+                <% @touchpoints.each do |touchpoint| %>
+                  <% firm = XyGraphShell.new %>
+                  <% firm.x = touchpoint.firm.name %>
+                  <% firm.save %>
+                <% end %>
+              <%= pie_chart XyGraphShell.group(:x).count, library: { title: {text: 'Touchpoints by Firm'}, backgroundColor: "transparent"} %>
+              <% XyGraphShell.delete_all %>
+              <% end %>
+            </div>
+            <div class="tab-pane fade" id="chem">
+              <strong>No Content!</strong>
+            </div>
+            <div class="tab-pane fade" id="chem">
+              <strong>No Content!</strong>
+            </div>
+          </div>
+        </div>
+        <div id="fig" class="tab-pane fade">
+          <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" class="active"><a href="#">Fintech</a></li>
+            <li role="presentation"><a href="#">Insurance</a></li>
+            <li role="presentation"><a href="#">Banks</a></li>
+          </ul>
+        </div>
+        <div id="tech" class="tab-pane fade">
+          <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" class="active"><a href="#">Semiconductors</a></li>
+            <li role="presentation"><a href="#">Software</a></li>
+            <li role="presentation"><a href="#">Internet</a></li>
+          </ul>
+        </div>
+      </div>
 
-      @last_week = XyGraphShell.new
-      @last_week.x = "Past Week"
-      @last_week.y = Touchpoint.where(:date => (week_date..end_date)).count
-      @last_week.save
 
-      @last_month = XyGraphShell.new
-      @last_month.x = "Past Month"
-      @last_month.y = Touchpoint.where(:date => (month_date..end_date)).count
-      @last_month.save
-      %>
 
-      <%= area_chart XyGraphShell.group(:x).sum(:y), min: month_date, max: end_date %>
-      <% XyGraphShell.delete_all %>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Firm Organization Chart</h3>
+          </div>
+          <div class="panel-body">
+            Placeholder for Org Chart
+          </div>
+        </div>
+      </div>
+
+
+      <div class="roster col-md-3">
+        <% @touchpoints.each do |touchpoint| %>
+        <% if touchpoint.firm.name == "Goldman Sachs" %>
+        <div class="media">
+          <div class="media-left media-middle">
+            <a href="#">
+              <img class="media-object" src="http://localhost:3000/assets/<%="Goldman Sachs_logo.png"%>" width=50px>
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><%=touchpoint.contact.full_name%></h4>
+            <%= touchpoint.contact.group %>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+
+
+    </div>
+
+  <div class="row">
+      <div class="description col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Org Chart Descriptions</h3>
+          </div>
+          <div class="panel-body">
+            <p>This provides amplifying information about the user selected region of the org chart.  Subdivided into three sectios.  Also provides 1) list of example companies in a coverage area and 2) recent deals (if possible)</p>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="news_feed col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">News Reel</h3>
+          </div>
+          <div class="panel-body">
+            <p>List of recent news stories about the company, must be from an API </p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="footer col-xs-12">
+        <p align="center">Footer Placeholder<p>
+      </div>
+  </div>
+</div> -->

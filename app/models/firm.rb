@@ -16,6 +16,8 @@ class Firm < ApplicationRecord
 
   has_many   :contacts
 
+  has_many   :firm_groups
+
   # Indirect associations
 
   # Validations

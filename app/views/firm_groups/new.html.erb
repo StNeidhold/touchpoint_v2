@@ -1,0 +1,46 @@
+<!-- Validation failure messages -->
+<% if @firm_group.errors.any? %>
+  <% @firm_group.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Firm Group</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_firm_group" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for firm_id -->
+      <div class="form-group">
+        <label for="firm_id" class="control-label">
+          Firm
+        </label>
+
+        <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name,), :class => "form-control") %>
+      </div>
+
+      <!-- Label and input for ib_group_id -->
+      <div class="form-group">
+        <label for="ib_group_id" class="control-label">
+          Ib group
+        </label>
+
+        <%= select_tag(:ib_group_id, options_from_collection_for_select(IbGroup.all, :id, :name,), :class => "form-control") %>
+      </div>
+
+      <button class="btn btn-success">
+        Create Firm Group
+      </button>
+      or
+      <a href="/firm_groups">Cancel</a>
+    </form>
+  </div>
+</div>

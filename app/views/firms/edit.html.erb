@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Edit Firm #<%= @firm.id %></h3>
+  <h3>Edit <%= @firm.name %></h3>
 </div>
 
 <div class="row">
@@ -62,6 +62,25 @@
 
         <%= select_tag(:process_type_id, options_from_collection_for_select(ProcessType.all, :id, :process_type, @firm.process_type_id), :class => "form-control") %>
       </div>
+
+      <!-- Label and input for ticker -->
+      <div class="form-group">
+        <label for="process_type_id" class="control-label">
+          Ticker
+        </label>
+
+        <input type="text" id="ticker" name="ticker" placeholder="Ticker" class="form-control" value="<%= @firm.ticker %>">
+      </div>
+
+      <!-- Label and input for exchange -->
+      <div class="form-group">
+        <label for="process_type_id" class="control-label">
+          Exchange
+        </label>
+
+        <input type="text" id="exchange" name="exchange" placeholder="Exchange" class="form-control" value="<%= @firm.exchange %>">
+      </div>
+
       <button class="btn btn-warning">
         Update Firm
       </button>

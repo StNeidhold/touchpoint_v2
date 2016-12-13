@@ -6,6 +6,7 @@ gem "chartkick"
 
 gem 'google_charts', '~> 1.2'
 
+
 gem 'groupdate', '~> 3.1', '>= 3.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

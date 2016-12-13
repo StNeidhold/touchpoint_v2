@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209210813) do
+ActiveRecord::Schema.define(version: 20161213031506) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -67,6 +67,13 @@ ActiveRecord::Schema.define(version: 20161209210813) do
     t.integer  "user_id"
   end
 
+  create_table "firm_groups", force: :cascade do |t|
+    t.integer  "firm_id"
+    t.integer  "ib_group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "firms", force: :cascade do |t|
     t.string   "name"
     t.string   "industry"
@@ -75,6 +82,8 @@ ActiveRecord::Schema.define(version: 20161209210813) do
     t.datetime "updated_at"
     t.string   "league"
     t.integer  "process_type_id"
+    t.string   "ticker"
+    t.string   "exchange"
   end
 
   create_table "follow_ups", force: :cascade do |t|
@@ -103,6 +112,12 @@ ActiveRecord::Schema.define(version: 20161209210813) do
     t.boolean  "open_or_closed"
     t.boolean  "hidden_or_public"
     t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ib_groups", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

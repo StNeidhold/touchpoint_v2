@@ -16,11 +16,11 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
 
-    @tracer = 0
-    referer = URI(request.referer).path
-    if referer == "/touchpoints/new"
+    # referer = URI(request.referer).path
+    # if referer == "/touchpoints/new"
       @tracer = 1
-    end
+    # end
+
 
     render("contacts/new.html.erb")
   end
@@ -43,10 +43,12 @@ class ContactsController < ApplicationController
 
     save_status = @contact.save
 
+    flag = params[:flag]
+
     if save_status == true
       referer = URI(request.referer).path
 
-      if @tracer = 1
+      if flag == 1
         redirect_to("/touchpoints/new")
       else
 

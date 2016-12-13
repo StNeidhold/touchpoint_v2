@@ -115,4 +115,5 @@ class TouchpointsController < ApplicationController
       redirect_back(:fallback_location => "/", :notice => "Touchpoint deleted.")
     end
   end
+
 end

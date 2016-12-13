@@ -8,6 +8,8 @@
   <% end %>
 <% end %>
 
+
+
 <div class="page-header">
   <h3>Add Contact</h3>
 </div>
@@ -18,7 +20,16 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
       <input name="user_id" type="hidden" value="<%= current_user.id %>">
+      <% if URI(request.referer).path == "/touchpoints/new" %>
+      <% @response = 1 %>
+      <input name="flag" id="flag" type="hidden" value="<%=@response%>">
+      <% else %>
+      <% @response = 0 %>
+      <input name="flag" id="flag" type="hidden" value="<%=@response%>">
+      <% end %>
 
+<%=URI(request.referer).path%>
+<%=@response%>
 
       <!-- Label and input for first_name -->
       <div class="form-group">
