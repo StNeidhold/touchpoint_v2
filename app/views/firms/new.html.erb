@@ -60,7 +60,7 @@
           Process type
         </label>
 
-        <%= select_tag(:process_type, options_from_collection_for_select(ProcessType.all, :process_type, :process_type, @firm.process_type), :class => "form-control") %>
+        <%= select_tag(:process_type_id, options_from_collection_for_select(ProcessType.all, :id, :process_type, @firm.process_type), :class => "form-control") %>
       </div>
 
       <!-- Label and input for ticker -->

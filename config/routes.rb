@@ -1,4 +1,72 @@
 Rails.application.routes.draw do
+  # Routes for the Event_attendee resource:
+  # CREATE
+  get "/event_attendees/new", :controller => "event_attendees", :action => "new"
+  post "/create_event_attendee", :controller => "event_attendees", :action => "create"
+
+  # READ
+  get "/event_attendees", :controller => "event_attendees", :action => "index"
+  get "/event_attendees/:id", :controller => "event_attendees", :action => "show"
+
+  # UPDATE
+  get "/event_attendees/:id/edit", :controller => "event_attendees", :action => "edit"
+  post "/update_event_attendee/:id", :controller => "event_attendees", :action => "update"
+
+  # DELETE
+  get "/delete_event_attendee/:id", :controller => "event_attendees", :action => "destroy"
+  #------------------------------
+
+  # Routes for the Firm_office resource:
+  # CREATE
+  get "/firm_offices/new", :controller => "firm_offices", :action => "new"
+  post "/create_firm_office", :controller => "firm_offices", :action => "create"
+
+  # READ
+  get "/firm_offices", :controller => "firm_offices", :action => "index"
+  get "/firm_offices/:id", :controller => "firm_offices", :action => "show"
+
+  # UPDATE
+  get "/firm_offices/:id/edit", :controller => "firm_offices", :action => "edit"
+  post "/update_firm_office/:id", :controller => "firm_offices", :action => "update"
+
+  # DELETE
+  get "/delete_firm_office/:id", :controller => "firm_offices", :action => "destroy"
+  #------------------------------
+
+  # Routes for the City resource:
+  # CREATE
+  get "/cities/new", :controller => "cities", :action => "new"
+  post "/create_city", :controller => "cities", :action => "create"
+
+  # READ
+  get "/cities", :controller => "cities", :action => "index"
+  get "/cities/:id", :controller => "cities", :action => "show"
+
+  # UPDATE
+  get "/cities/:id/edit", :controller => "cities", :action => "edit"
+  post "/update_city/:id", :controller => "cities", :action => "update"
+
+  # DELETE
+  get "/delete_city/:id", :controller => "cities", :action => "destroy"
+  #------------------------------
+
+  # Routes for the Business_school resource:
+  # CREATE
+  get "/business_schools/new", :controller => "business_schools", :action => "new"
+  post "/create_business_school", :controller => "business_schools", :action => "create"
+
+  # READ
+  get "/business_schools", :controller => "business_schools", :action => "index"
+  get "/business_schools/:id", :controller => "business_schools", :action => "show"
+
+  # UPDATE
+  get "/business_schools/:id/edit", :controller => "business_schools", :action => "edit"
+  post "/update_business_school/:id", :controller => "business_schools", :action => "update"
+
+  # DELETE
+  get "/delete_business_school/:id", :controller => "business_schools", :action => "destroy"
+  #------------------------------
+
   # Routes for the Firm_group resource:
   # CREATE
   get "/firm_groups/new", :controller => "firm_groups", :action => "new"
@@ -37,11 +105,36 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root :to => "touchpoints#dashboard"
 
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# XXXXXXXXXXXXXx    TEST PAGES XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 #ONLY FOR DESIGN TESTING
-get "/tester", :controller => :tester, :action => "main"
+get "/test", :controller => :test, :action => "main"
 
 #for reload of page after firm seletion w/ params
-get "/tester/update", :controller => :tester, :action => "update"
+get "/test/firm_update", :controller => :test, :action => "update"
+
+#for reload of page after firm seletion w/ params
+get "/test/test_dashboard", :controller => :test, :action => "dashboard"
+
+#for reload of page after firm seletion w/ params
+get "/test/test_landing", :controller => :test, :action => "landing"
+
+#for reload of page after firm seletion w/ params
+get "/test/test_firms", :controller => :test, :action => "firms"
+
+#for reload of page after firm seletion w/ params
+get "/test/test_timeline", :controller => :test, :action => "timeline"
+
+#for reload of page after firm seletion w/ params
+get "/test/blank_test", :controller => :test, :action => "blank"
+
+#for reload of page after firm seletion w/ params
+get "/test/firm_status/:id", :controller => :test, :action => "firm_status"
+
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
   #Routes for dashboard
   get "/dashboard", :controller => "touchpoints", :action => "dashboard"
@@ -226,6 +319,7 @@ get "/tester/update", :controller => :tester, :action => "update"
   # DELETE
   get "/delete_group/:id", :controller => "groups", :action => "destroy"
   #------------------------------
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

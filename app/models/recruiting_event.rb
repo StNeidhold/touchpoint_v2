@@ -23,5 +23,8 @@ class RecruitingEvent < ApplicationRecord
    "#{date.strftime("%m/%e")} #{time.strftime("%I%p")}"
  end
 
+ def event_title
+  "#{date.strftime("%m/%e")} - #{firm.name} - #{name}"
+ end
 
 end

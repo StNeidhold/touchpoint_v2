@@ -1,0 +1,55 @@
+<!-- Validation failure messages -->
+<% if @firm_office.errors.any? %>
+  <% @firm_office.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Firm Office</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_firm_office" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for firm_id -->
+      <div class="form-group">
+        <label for="firm_id" class="control-label">
+          Firm
+        </label>
+
+        <input type="text" id="firm_id" name="firm_id" placeholder="Firm" class="form-control" value="<%= @firm_office.firm_id %>">
+      </div>
+
+      <!-- Label and input for city_id -->
+      <div class="form-group">
+        <label for="city_id" class="control-label">
+          City
+        </label>
+
+        <input type="text" id="city_id" name="city_id" placeholder="City" class="form-control" value="<%= @firm_office.city_id %>">
+      </div>
+
+      <!-- Label and input for integer -->
+      <div class="form-group">
+        <label for="integer" class="control-label">
+          Integer
+        </label>
+
+        <input type="text" id="integer" name="integer" placeholder="Integer" class="form-control" value="<%= @firm_office.integer %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Firm Office
+      </button>
+      or
+      <a href="/firm_offices">Cancel</a>
+    </form>
+  </div>
+</div>

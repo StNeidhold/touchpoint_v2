@@ -9,6 +9,7 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
+        <th>RSVP</th>
         <th>Name</th>
         <th>Firm</th>
         <th>Date</th>
@@ -23,6 +24,22 @@
       <% @recruiting_event = RecruitingEvent.where({:user_id => current_user.id}) %>
       <% @recruiting_event.each do |recruiting_event| %>
       <tr>
+        <td>
+          <% if EventAttendee.where({:user_id => current_user.id, :recruiting_event_id => recruiting_event.id}).count == 0 %>
+          <form action="/create_event_attendee" method="post">
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+            <input name="user_id" type="hidden" value="<%= current_user.id %>">
+            <input name="recruiting_event_id" type="hidden" value="<%= recruiting_event.id %>">
+            <button class="btn btn-success">RSVP</button>
+          </form>
+          <% else %>
+          <% @id = EventAttendee.find_by({:user_id => current_user.id, :recruiting_event_id => recruiting_event.id}) %>
+          <form action="/delete_event_attendee/<%=@id.id%>" method="get">
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+            <button class="btn btn-danger">Cancel</button>
+            </form>
+          <% end %>
+        </td>
         <td><%= recruiting_event.name %></td>
         <td>
           <% if recruiting_event.firm.present? %>

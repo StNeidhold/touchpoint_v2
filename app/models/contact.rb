@@ -3,6 +3,9 @@ class Contact < ApplicationRecord
 
   belongs_to :firm
 
+  belongs_to( :business_school, :class_name => "BusinessSchool", :foreign_key => "bs_alma_mater_id" )
+
+
   has_many   :touchpoints,
              :dependent => :destroy
 

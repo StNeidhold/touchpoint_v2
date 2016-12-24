@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<style>
+.panel-body{
+  box-shadow: none;
+}
+</style>
+
+<script type="text/javascript"></script>
+
+<!-- counter for putting 2 firm boxes per row -->
+<% counter = 0 %>
+<!-- all firms loop -->
+<% @firms = Firm.all %>
+<% @firms.order("name ASC").each do |firm| %>
+  <% if firm.ticker != "Private"
+  # Stock Data Pull
+  stock_url = "http://finance.google.com/finance/info?client=ig&q=#{firm.exchange}%3A#{firm.ticker}"
+  stock_raw_data = open(stock_url).read
+  stock_data1 = stock_raw_data.gsub("[", "")
+  stock_data2 = stock_data1.gsub("]", "")
+  stock_parsed_data = JSON.parse(stock_data2)
+  @price = stock_parsed_data["l"]
+  @change = stock_parsed_data["c"]
+  @percen = @change.to_f / (@price.to_f - @change.to_f) * 10000
+  @percen_change = @percen.round / 100.0
+  end
+  if @change.to_f >= 0
+    color = "green"
+  else
+    color = "red"
+  end
+  %>
+  <% if (counter % 2 == 0) %>
+  <div class="row header">
+  <% end %>
+    <div class="col-xs-6">
+      <div class="panel panel-default" style="height: 300px;">
+        <div class="panel panel-body">
+          <div class="row">
+          <div class="col-xs-3">
+            <p align="center"><b><%= firm.name %></b></p>
+          </div>
+          <div class="col col-xs-6">
+            <img src="http://localhost:3000/assets/logos/<%=firm.name%>_logo" class="img-responsive" style="padding: 0px;">
+          </div>
+          <div class="col col-xs-3">
+            <% if firm.ticker == "Private" %>
+            <p align="center"><strong><%=firm.ticker%></strong></p>
+            <% else %>
+            <p align="center"><a href="https://finance.yahoo.com/quote/<%=firm.ticker%>?p=<%=firm.ticker%>"><strong><%=firm.ticker%></strong></a> (<%=firm.exchange%>)</p>
+            <p align="center">$<%=@price%></p>
+            <p align="center" style="color: <%=color%>"><%=@change%></p>
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-xs-4">
+            <p align="center"><b><%= Touchpoint.where({:user_id => current_user.id, :firm_id => firm.id}).count %></b></p>
+          </div>
+          <div class="col col-xs-4">
+            <p align="center"><b><%= Touchpoint.where({:user_id => current_user.id, :firm_id => firm.id}).count %></b></p>
+          </div>
+          <div class="col col-xs-4">
+            <p align="center"><b><%= Touchpoint.where({:user_id => current_user.id, :firm_id => firm.id}).count %></b></p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  <% if (((counter + 1) % 2 == 0) && (counter != 0)) || (counter == (@firms.count - 1)) %>
+  </div>
+  <% end %>
+  <% counter = counter + 1 %>
+<% end %>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<style>
+/*.img-circular{
+ width: 50px;
+ height: 50px;
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ -webkit-border-radius: 100px;
+ -moz-border-radius: 100px;
+}*/
+#dash_head{
+  font-weight: 600;
+  text-align: center;
+  /*color: white;*/
+}
+#name_head{
+  font-weight: 300;
+  text-align: center;
+  /*color: white;*/
+}
+#content_pane{
+  vertical-align: middle;
+}
+#contact_content{
+  margin-left: 30px;
+}
+#content_area{
+  height: 300px;
+  overflow: auto;
+}
+.thumbnail {
+   display: inline-block;
+   border-style: hidden;
+   vertical-align: middle;
+}
+</style>
+
+<div class="header">
+</div>
+
+
+<div class="container">
+
+  <form action="/test/firm_update" method="get">
+
+    <% if @main_banner_flag == 0 %>
+    <div class="row">
+      <div class="firm_banner col-xs-12">
+        <div class="jumbotron">
+          <h1 id="dash_head" align="center">Master Firm Exploration Page</h1>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    <div class="row">
+      <div class="col col-md-12">
+        <!-- Label and input for firm_id -->
+        <div class="form-group">
+          <label for="firm_id" class="control-label">
+            Firm
+          </label>
+          <%= select_tag(:firm_id, options_from_collection_for_select(Firm.all, :id, :name, @firm.id), :class => "form-control" ) %>
+          <button class="btn btn-success">
+            Refresh
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- This shoudl include basic firms fact like headquarters, personnel, offices, stock price -->
+    <% if @main_banner_flag == 1 %>
+    <div class="row">
+      <div class="firm_banner col-xs-12">
+        <div class="jumbotron">
+          <h1 id="name_head" align="center"><%= @firm.name %></h1>
+        </div>
+      </div>
+      <div class="col col-md-offset-3 col-md-3">
+        <dl class="dl-horizontal">
+          <dt>Headquarters</dt>
+          <dd>HQ Content</dd>
+          <dt>Employees</dt>
+          <dd><%= @firm.size %></dd>
+          <dt>League</dt>
+          <dd><%= @firm.league %></dd>
+        </dl>
+      </div>
+      <div class="col col-md-3">
+        <dl class="dl-horizontal">
+          <dt>Headquarters</dt>
+          <dd>HQ Content</dd>
+          <dt>Employees</dt>
+          <dd><%= @firm.size %></dd>
+          <dt>League</dt>
+          <dd><%= @firm.league %></dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-md-3">
+        <h3 align="left">Groups</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="org_chart col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <% @groups = FirmGroup.where({:firm_id => @firm.id}) %>
+          <% @groups.each do |group| %>
+          <li role="presentation"><a href="#<%= group.ib_group.name.gsub(" ","_").gsub(",","") %>" data-toggle="tab"><%= group.ib_group.name %></a></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col col-md-6">
+        <div class="tab-content" id="content_pane">
+          <% @groups.each do |group| %>
+          <div class="tab-pane fade" id="<%= group.ib_group.name.gsub(" ","_").gsub(",","") %>">
+            <%= group.ib_group.name %> Content
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD OFFICES MAP using that map chart thing -->
+
+    <% end %>
+  </form>
+
+
+  <!-- <div class="row">
+      <div class="org_chart col-md-6">
+
+        <ul class="nav nav-tabs nav-justified">
+          <li role="presentation"><a href="#industrials" data-toggle="tab">Industrials</a></li>
+          <li role="presentation" class="active"><a href="#fig" data-toggle="tab">Fig</a></li>
+          <li role="presentation"><a href="#tech" data-toggle="tab">Tech</a></li>
+        </ul>
+        <div class="tab-content">
+        <div id="industrials" class="tab-pane fade">
+          <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" class="active"><a href="#pp" data-toggle="tab">Paper / Packaging</a></li>
+            <li role="presentation"><a href="#chem" data-toggle="tab">Chemicals</a></li>
+            <li role="presentation"><a href="#manu" data-toggle="tab">Manufacturing</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade" id="pp">
+              <% @touchpoints = Touchpoint.where({ :user_id => current_user.id }) %>
+              <% if Touchpoint.where({:user_id => current_user.id}).count == 0 %>
+              <div class="well well-lg" id="no_touch">
+              <strong>No Touchpoints Yet!</strong>
+            </div>
+              <%else%>
+                <% @touchpoints.each do |touchpoint| %>
+                  <% firm = XyGraphShell.new %>
+                  <% firm.x = touchpoint.firm.name %>
+                  <% firm.save %>
+                <% end %>
+              <%= pie_chart XyGraphShell.group(:x).count, library: { title: {text: 'Touchpoints by Firm'}, backgroundColor: "transparent"} %>
+              <% XyGraphShell.delete_all %>
+              <% end %>
+            </div>
+            <div class="tab-pane fade" id="chem">
+              <strong>No Content!</strong>
+            </div>
+            <div class="tab-pane fade" id="chem">
+              <strong>No Content!</strong>
+            </div>
+          </div>
+        </div>
+        <div id="fig" class="tab-pane fade">
+          <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" class="active"><a href="#">Fintech</a></li>
+            <li role="presentation"><a href="#">Insurance</a></li>
+            <li role="presentation"><a href="#">Banks</a></li>
+          </ul>
+        </div>
+        <div id="tech" class="tab-pane fade">
+          <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" class="active"><a href="#">Semiconductors</a></li>
+            <li role="presentation"><a href="#">Software</a></li>
+            <li role="presentation"><a href="#">Internet</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Firm Organization Chart</h3>
+          </div>
+          <div class="panel-body">
+            Placeholder for Org Chart
+          </div>
+        </div>
+      </div>
+
+
+      <div class="roster col-md-3">
+        <% @touchpoints.each do |touchpoint| %>
+        <% if touchpoint.firm.name == "Goldman Sachs" %>
+        <div class="media">
+          <div class="media-left media-middle">
+            <a href="#">
+              <img class="media-object" src="http://localhost:3000/assets/<%="Goldman Sachs_logo.png"%>" width=50px>
+            </a>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><%=touchpoint.contact.full_name%></h4>
+            <%= touchpoint.contact.group %>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+
+
+    </div>
+
+  <div class="row">
+      <div class="description col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Org Chart Descriptions</h3>
+          </div>
+          <div class="panel-body">
+            <p>This provides amplifying information about the user selected region of the org chart.  Subdivided into three sectios.  Also provides 1) list of example companies in a coverage area and 2) recent deals (if possible)</p>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="news_feed col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">News Reel</h3>
+          </div>
+          <div class="panel-body">
+            <p>List of recent news stories about the company, must be from an API </p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="footer col-xs-12">
+        <p align="center">Footer Placeholder<p>
+      </div>
+  </div>
+</div> -->

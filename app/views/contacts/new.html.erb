@@ -28,8 +28,6 @@
       <input name="flag" id="flag" type="hidden" value="<%=@response%>">
       <% end %>
 
-<%=URI(request.referer).path%>
-<%=@response%>
 
       <!-- Label and input for first_name -->
       <div class="form-group">
@@ -90,8 +88,7 @@
         <label for="alma_mater" class="control-label">
           Business School Alma Mater
         </label>
-
-        <input type="text" id="alma_mater" name="alma_mater" placeholder="Alma Mater" class="form-control" value="<%= @contact.alma_mater %>">
+        <%= select_tag(:bs_alma_mater_id, options_from_collection_for_select(BusinessSchool.all, :id, :name,), :class => "form-control") %>
       </div>
 
       <!-- Label and input for photo -->

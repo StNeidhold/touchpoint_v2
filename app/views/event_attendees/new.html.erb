@@ -1,0 +1,38 @@
+<!-- Validation failure messages -->
+<% if @event_attendee.errors.any? %>
+  <% @event_attendee.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Event Attendee</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_event_attendee" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      <input name="user_id" type="hidden" value="<%= current_user.id %>">
+
+      <!-- Label and input for recruiting_event_id -->
+      <div class="form-group">
+        <label for="recruiting_event_id" class="control-label">
+          Recruiting event
+        </label>
+
+        <%= select_tag(:recruiting_event_id, options_from_collection_for_select(RecruitingEvent.all, :id, :event_title), :class => "form-control") %>
+      </div>
+
+      <button class="btn btn-success">
+        Create Event Attendee
+      </button>
+      or
+      <a href="/event_attendees">Cancel</a>
+    </form>
+  </div>
+</div>

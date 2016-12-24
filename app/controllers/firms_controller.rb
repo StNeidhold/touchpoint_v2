@@ -26,7 +26,7 @@ class FirmsController < ApplicationController
     @percen = @change.to_f / (@price.to_f - @change.to_f) * 10000
     @percen_change = @percen.round / 100.0
     end
-    
+
     # Generic News API Data
     news_api_key = "cc67e2f543e140c0802a04e95d83e259"
     news_api_source = "financial-times"
@@ -101,7 +101,7 @@ class FirmsController < ApplicationController
     @firm.industry = params[:industry]
     @firm.league = params[:league]
     @firm.size = params[:size]
-    @firm.process_type = params[:process_type]
+    @firm.process_type_id = params[:process_type_id]
     @firm.ticker = params[:ticker]
     @firm.exchange = params[:exchange]
 

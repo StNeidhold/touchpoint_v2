@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213031506) do
+ActiveRecord::Schema.define(version: 20161221035114) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -49,6 +49,18 @@ ActiveRecord::Schema.define(version: 20161213031506) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "business_schools", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -63,13 +75,29 @@ ActiveRecord::Schema.define(version: 20161213031506) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "privacy"
-    t.string   "alma_mater"
+    t.integer  "bs_alma_mater_id"
     t.integer  "user_id"
+    t.integer  "ug_alma_mater_id"
+  end
+
+  create_table "event_attendees", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "recruiting_event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "firm_groups", force: :cascade do |t|
     t.integer  "firm_id"
     t.integer  "ib_group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "firm_offices", force: :cascade do |t|
+    t.integer  "firm_id"
+    t.string   "city_id"
+    t.string   "integer"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -142,6 +170,7 @@ ActiveRecord::Schema.define(version: 20161213031506) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "group_id"
+    t.integer  "user_id"
   end
 
   create_table "process_types", force: :cascade do |t|

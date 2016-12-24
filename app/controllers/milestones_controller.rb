@@ -1,7 +1,6 @@
 class MilestonesController < ApplicationController
   def index
-    @q = Milestone.ransack(params[:q])
-    @milestones = @q.result(:distinct => true).includes().page(params[:page]).per(10)
+    @milestones = Milestone.all
 
     render("milestones/index.html.erb")
   end
@@ -25,6 +24,7 @@ class MilestonesController < ApplicationController
     @milestone.closed_events_start = params[:closed_events_start]
     @milestone.bankweek = params[:bankweek]
     @milestone.interviews_start = params[:interviews_start]
+    @milestone.user_id = params[:user_id]
 
     save_status = @milestone.save
 

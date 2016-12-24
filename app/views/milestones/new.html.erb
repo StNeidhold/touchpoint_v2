@@ -17,43 +17,91 @@
     <form action="/create_milestone" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      <input name="user_id" type="hidden" value="<%= current_user.id %>">
 
-      <!-- Label and input for campus_recruiting_start -->
+      <!-- Label and input for date -->
       <div class="form-group">
-        <label for="campus_recruiting_start" class="control-label">
-          Campus recruiting start
+        <label for="date" class="control-label">
+          Campus Recruiting Start Date
         </label>
-
-        <input type="text" id="campus_recruiting_start" name="campus_recruiting_start" placeholder="Campus recruiting start" class="form-control" value="<%= @milestone.campus_recruiting_start %>">
+      <div class='input-group date' id='datetimepicker1'>
+        <input type='text' class="form-control" name="date" id="campus_recruiting_start">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
       </div>
 
-      <!-- Label and input for closed_events_start -->
-      <div class="form-group">
-        <label for="closed_events_start" class="control-label">
-          Closed events start
-        </label>
-
-        <input type="text" id="closed_events_start" name="closed_events_start" placeholder="Closed events start" class="form-control" value="<%= @milestone.closed_events_start %>">
+      <script type="text/javascript">
+        $(function () {
+          $('#datetimepicker1').datetimepicker({
+            format: 'YYYY-MM-DD'
+          });
+        });
+      </script>
       </div>
 
-      <!-- Label and input for bankweek -->
+      <!-- Label and input for date -->
       <div class="form-group">
-        <label for="bankweek" class="control-label">
+        <label for="date" class="control-label">
+          Closed Events Start Date
+        </label>
+      <div class='input-group date' id='datetimepicker2'>
+        <input type='text' class="form-control" name="date" id="closed_events_start">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+
+      <script type="text/javascript">
+        $(function () {
+          $('#datetimepicker2').datetimepicker({
+            format: 'YYYY-MM-DD'
+          });
+        });
+      </script>
+      </div>
+
+      <!-- Label and input for date -->
+      <div class="form-group">
+        <label for="date" class="control-label">
           Bankweek
         </label>
-
-        <input type="text" id="bankweek" name="bankweek" placeholder="Bankweek" class="form-control" value="<%= @milestone.bankweek %>">
+      <div class='input-group date' id='datetimepicker3'>
+        <input type='text' class="form-control" name="date" id="bankweek">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
       </div>
 
-      <!-- Label and input for interviews_start -->
+      <script type="text/javascript">
+        $(function () {
+          $('#datetimepicker3').datetimepicker({
+            format: 'YYYY-MM-DD'
+          });
+        });
+      </script>
+      </div>
+
+      <!-- Label and input for date -->
       <div class="form-group">
-        <label for="interviews_start" class="control-label">
-          Interviews start
+        <label for="date" class="control-label">
+          Interviews Start
         </label>
-
-        <input type="text" id="interviews_start" name="interviews_start" placeholder="Interviews start" class="form-control" value="<%= @milestone.interviews_start %>">
+      <div class='input-group date' id='datetimepicker4'>
+        <input type='text' class="form-control" name="date" id="interviews_start">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </span>
       </div>
 
+      <script type="text/javascript">
+        $(function () {
+          $('#datetimepicker4').datetimepicker({
+            format: 'YYYY-MM-DD'
+          });
+        });
+      </script>
+      </div>
       <button class="btn btn-success">
         Create Milestone
       </button>

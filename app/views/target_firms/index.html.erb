@@ -52,12 +52,12 @@
         <% diff = @hits - target_firm.touch_goal.to_i%>
         <% if diff >= 0 %>
         <td id="diff_good">
-          <strong>+<%=diff%></strong>
-          <% else %>
-          <td id="diff_bad">
-            <strong><%=diff%></strong>
-            <% end %>
-          </td>
+        <strong>+<%=diff%></strong>
+        <% else %>
+        <td id="diff_bad">
+        <strong><%=diff%></strong>
+        <% end %>
+        </td>
         <td>
           <a href="/target_firms/<%= target_firm.id %>" class="btn btn-primary">Show</a>
           <a href="/target_firms/<%= target_firm.id %>/edit" class="btn btn-warning">Edit</a>
