@@ -22,7 +22,7 @@
       </tr>
 
       <% @recruiting_event = RecruitingEvent.where({:user_id => current_user.id}) %>
-      <% @recruiting_event.each do |recruiting_event| %>
+      <% @recruiting_event.order("date ASC").each do |recruiting_event| %>
       <tr>
         <td>
           <% if EventAttendee.where({:user_id => current_user.id, :recruiting_event_id => recruiting_event.id}).count == 0 %>

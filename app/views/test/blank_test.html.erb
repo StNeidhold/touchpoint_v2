@@ -10,9 +10,24 @@
 
 <!-- counter for putting 2 firm boxes per row -->
 <% counter = 0 %>
+<!-- Dummy Date Variables -->
+<% start_date_dummy = "2016-11-1" %>
+<% end_date_dummy = "2017-3-1" %>
 <!-- all firms loop -->
 <% @firms = Firm.all %>
 <% @firms.order("name ASC").each do |firm| %>
+<!-- Only Show target firms -->
+<% if TargetFirm.where({:user_id => current_user.id, :firm_id => firm.id}).blank? %>
+<% else %>
+
+<!-- Variable Declarations -->
+<% user_touchpoints = Touchpoint.where({:user_id => current_user.id, :firm_id => firm.id}).count %>
+<% total_days = (end_date_dummy.to_date - start_date_dummy.to_date).to_i %>
+<% total_weeks = ((end_date_dummy.to_date - start_date_dummy.to_date).to_i / 7).to_f.round(2) %>
+<% current_days = (Date.today - start_date_dummy.to_date).to_i %>
+<% current_weeks = ((Date.today - start_date_dummy.to_date).to_i / 7).to_f.round(2) %>
+<% current_weekly_rate = (user_touchpoints / current_weeks).to_f.round(2) %>
+<% end_estimate = (current_weekly_rate * total_weeks).round(2) %>
   <% if firm.ticker != "Private"
   # Stock Data Pull
   stock_url = "http://finance.google.com/finance/info?client=ig&q=#{firm.exchange}%3A#{firm.ticker}"
@@ -31,40 +46,90 @@
     color = "red"
   end
   %>
+  <!-- Determining if a touchpoint goal exists and assigning the value to a variable -->
+  <% if TargetFirm.where({:user_id => current_user.id, :firm_id => firm.id}).blank? %>
+  <% touch_goal = "Not Targeted" %>
+  <% else %>
+  <% touch_goal = TargetFirm.find_by({:user_id => current_user.id, :firm_id => firm.id}).touch_goal.to_i %>
+  <% end %>
+  <!-- Counter for displaying two panels per row -->
   <% if (counter % 2 == 0) %>
   <div class="row header">
-  <% end %>
+    <% end %>
     <div class="col-xs-6">
-      <div class="panel panel-default" style="height: 300px;">
-        <div class="panel panel-body">
+      <div class="panel panel-default" style="height: 290px; overflow: auto;">
+        <div class="panel panel-body" style="padding-bottom: 0px; margin: 0;">
           <div class="row">
-          <div class="col-xs-3">
-            <p align="center"><b><%= firm.name %></b></p>
+            <div class="col-xs-3">
+              <p align="center"><b><%= firm.name %></b></p>
+                <% if touch_goal != "Not Targeted" %>
+                  <% if end_estimate.to_f >= touch_goal.to_f %>
+                  <% font_color = "#5cb85c" %>
+                  <% label_marker = "success" %>
+                  <p align="center" style="color: <%=font_color%>;"><b>On Track</b></p>
+                  <% else %>
+                  <% font_color = "#d9534f" %>
+                  <% label_marker = "danger" %>
+                  <p align="center" style="color: <%=font_color%>;"><b>Needs Attention</b></p>
+                  <% end %>
+                <% else %>
+                <p class="text-muted" align="center"><%= touch_goal %></p>
+                <% end %>
+            </div>
+            <div class="col col-xs-6">
+              <p align="center" style="margin: 0; padding: 0px;"><img src="http://localhost:3000/assets/logos/<%=firm.name%>_logo" class="img-responsive" style="height: 125px; padding: 0px;"></p>
+            </div>
+            <div class="col col-xs-3">
+              <% if firm.ticker == "Private" %>
+              <p align="center" style="margin: 0; padding: 0px;"><strong><%=firm.ticker%></strong></p>
+              <% else %>
+              <p align="center" style="margin: 0; padding: 0px;"><a href="https://finance.yahoo.com/quote/<%=firm.ticker%>?p=<%=firm.ticker%>"><strong><%=firm.ticker%></strong></a> (<%=firm.exchange%>)</p>
+              <p align="center" style="margin: 0; padding: 5px;">$<%=@price%></p>
+              <p align="center" style="color: <%=color%>; margin: 0; padding: 0px;"><%=@change%></p>
+              <% end %>
+            </div>
           </div>
-          <div class="col col-xs-6">
-            <img src="http://localhost:3000/assets/logos/<%=firm.name%>_logo" class="img-responsive" style="padding: 0px;">
+          <div class="row">
+            <div class="col col-xs-4">
+              <div class="row">
+                <div class="col col-xs-12">
+                  <p align="center" style="margin: 0; padding-top: 15px"><b>Total Touchpoints:</b></p>
+                  <p align="center"><%= user_touchpoints %></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-xs-12">
+                  <p align="center" style="margin: 0; padding: 0px"><b>Your Rate:</b></p>
+                  <p align="center" style="margin: 0; padding: 0px"><%= current_weekly_rate %> per week</p>
+                </div>
+              </div>
+            </div>
+            <div class="col col-xs-4">
+              <p align="center" style="padding-bottom: 10px;"><b>Est. Touchpoints by <%= end_date_dummy %></b></p>
+              <p align="center"><span class="label label-<%=label_marker%>" style="padding: 10px; font-size: 24px;"><%= end_estimate %></span></p>
+            </div>
+            <div class="col col-xs-4">
+              <div class="row">
+                <div class="col col-xs-12">
+                  <p align="center" style="margin: 0; padding-top: 15px"><b>Touchpoint Goal:</b></p>
+                  <p align="center"><%= touch_goal %></p>
+                </div>
+                <div class="col col-xs-12">
+                  <p align="center" style="margin: 0; padding: 0px;"><b>Required Rate</b></p>
+                  <p align="center" style="margin: 0; padding: 0px;">
+                    <% if TargetFirm.where({:user_id => current_user.id, :firm_id => firm.id}).blank? %>
+                    N/A
+                    <% else %>
+                    <%= ((TargetFirm.find_by({:user_id => current_user.id, :firm_id => firm.id}).touch_goal.to_f) / (total_weeks)).to_f.round(2) %> per week
+                    <% end %>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col col-xs-3">
-            <% if firm.ticker == "Private" %>
-            <p align="center"><strong><%=firm.ticker%></strong></p>
-            <% else %>
-            <p align="center"><a href="https://finance.yahoo.com/quote/<%=firm.ticker%>?p=<%=firm.ticker%>"><strong><%=firm.ticker%></strong></a> (<%=firm.exchange%>)</p>
-            <p align="center">$<%=@price%></p>
-            <p align="center" style="color: <%=color%>"><%=@change%></p>
-            <% end %>
+          <div class="row">
+              <p align="center" style="margin: 0; padding-bottom: 0px; padding-top: 0px;"><a href="#" class="btn btn-default"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></p>
           </div>
-        </div>
-        <div class="row">
-          <div class="col col-xs-4">
-            <p align="center"><b><%= Touchpoint.where({:user_id => current_user.id, :firm_id => firm.id}).count %></b></p>
-          </div>
-          <div class="col col-xs-4">
-            <p align="center"><b><%= Touchpoint.where({:user_id => current_user.id, :firm_id => firm.id}).count %></b></p>
-          </div>
-          <div class="col col-xs-4">
-            <p align="center"><b><%= Touchpoint.where({:user_id => current_user.id, :firm_id => firm.id}).count %></b></p>
-          </div>
-        </div>
         </div>
       </div>
     </div>
@@ -72,4 +137,7 @@
   </div>
   <% end %>
   <% counter = counter + 1 %>
+  <!-- if statement for target firms end -->
+  <% end %>
+<!-- do loop firms.all end -->
 <% end %>
